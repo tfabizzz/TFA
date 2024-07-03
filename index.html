@@ -1,0 +1,692 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>thefineace</title>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<style>
+
+.textblack {
+color: rgb(0, 0, 0);
+font-family: sans-serif;
+
+}
+
+.fs:hover{
+font-size: 18px;
+color:rgb(255, 39, 39);
+}
+.bgcolor1 {
+background-color: rgb(255, 255, 255);
+}
+.sm{
+color:white;
+
+}
+
+.fa {
+padding: 10px;
+padding-right: 20px;
+padding-bottom: 25px;
+font-size: 10px;
+width: 10px;
+height: 20px;
+text-align: center;
+text-decoration: none;
+border-radius: 50%;
+/* margin-left: 40px; */
+}
+
+.fa:hover .image1:hover{
+opacity: 0.9;
+color:bisque;
+}
+
+
+.subbtn{
+background-color:rgb(218, 59, 38);
+color:white;
+}
+fs:hover{
+color: rgb(255, 254, 254);
+}
+
+.fs1{
+font-size: 30px;
+color: rgb(255, 254, 254);
+}
+.fs2{
+  font-size: 14px;
+  color: rgb(11, 11, 11);
+}
+.fs3{
+  font-size: 12px;
+}
+.responsive {
+max-width: 100%;
+height: auto;
+}
+.data1{
+position: relative;
+width: 50%;
+
+}
+
+.image {
+display: block;
+width: 100%;
+height: auto;
+}
+
+.overlay {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: #948a8a5a;
+overflow: hidden;
+width: 180%;
+height: 100%;
+-webkit-transform: scale(0);
+-ms-transform: scale(0);
+transform: scale(0);
+-webkit-transition: .3s ease;
+transition: .3s ease;
+}
+
+.data1:hover .overlay {
+-webkit-transform: scale(1);
+-ms-transform: scale(1);
+transform: scale(1);
+}
+
+
+.text {
+color: rgb(255, 255, 255);
+font-size: 20px;
+position: absolute;
+top: 50%;
+left: 50%;
+-webkit-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+text-align: center;
+}
+.c:hover{
+background-color: rgba(61, 233, 233, 0.425);
+}
+
+.c1:hover{
+background-color:rgb(168, 106, 40);
+}
+
+.card{
+box-shadow: 2px 8px 8px 0 rgb(20, 19, 19);
+transition: 0.5s;
+}
+
+.card-img-top1{
+  position: relative;
+width: 100%;
+/* height:200px; */
+
+}
+.image1 {
+display: block;
+width: 100%;
+height: 200px;
+}
+
+overlay {
+  position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: #afaeae86;
+overflow: hidden;
+/* width: 200px; */
+height: 100%;
+-webkit-transform: scale(0);
+-ms-transform: scale(0);
+transform: scale(0);
+-webkit-transition: .3s ease;
+transition: .3s ease;
+}
+
+.text {
+color: white;
+font-size: 20px;
+position: absolute;
+ top: 50%;
+left: 50%; 
+-webkit-transform: translate(-30%, -30%);
+-ms-transform: translate(-30%, -30%);
+transform: translate(-30%, -30%); 
+text-align: left;
+}
+
+.card-img-top1:hover .overlay {
+  width: 100%;
+-webkit-transform: scale(1);
+-ms-transform: scale(1);
+transform: scale(1);
+}
+
+
+body{
+    margin: 0;
+    background-color: #050505;
+}
+main{
+    width: min(1200px, 90vw);
+    margin: auto;
+}
+.slider{
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000000 10% 90%,
+        transparent
+    );
+}
+.slider .list{
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+.slider .list .item{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    transition: filter 0.5s;
+    animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) )!important;
+}
+.slider .list .item img{
+    width: 100%;
+}
+@keyframes autoRun{
+    from{
+        left: 100%;
+    }to{
+        left: calc(var(--width) * -1);
+    }
+}
+.slider:hover .item{
+    animation-play-state: paused!important;
+    filter: grayscale(1);
+}
+.slider .item:hover{
+    filter: grayscale(0);
+}
+.slider[reverse="true"] .item{
+    animation: reversePlay 10s linear infinite;
+}
+@keyframes reversePlay{
+    from{
+        left: calc(var(--width) * -1);
+    }to{
+        left: 100%;
+    }
+}
+
+
+
+    
+
+
+.card:hover {
+box-shadow: 2px 8px 16px 0 rgb(71, 66, 216);
+} 
+
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000; /* Green background */
+}
+
+.chat-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.whatsapp-chat {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff; /* White text */
+    background-color: #090909; /* Green background */
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color ;
+}
+
+.whatsapp-chat img {
+    vertical-align: middle;
+    width: 24px; /* Adjust icon size */
+    height: 24px; /* Adjust icon size */
+    margin-right: 10px;
+}
+
+.whatsapp-chat:hover {
+    background-color: #115c1a; /* Pink background on hover */
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+
+
+<nav class="navbar   navbar-expand-sm navbar-fixed-top bgcolor1 navbar-dark navht textclr ">
+<div class="container-fluid">
+<a class="navbar-brand" href="#">
+  <b class="logo img-rounded ">
+    <img src="img/pixelcut-export (2).png" alt="TFA" style="width:100%; height: 50px;" />
+  </b>
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse fs2" id="collapsibleNavbar">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link textblack fs2" href="index.html">Home</a>
+    </li>
+   
+    </li>
+   
+    
+    </li>
+    <li class="nav-item">
+      <a class="nav-link textblack fs2" href="contact us.html">Contact us</a>
+    </li>
+    </li>
+   
+  </ul>
+</div>
+</div>
+</nav>
+
+
+
+
+<!-- Carousel silder part--------------------------------------------------------------------------------------------------------->
+
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+
+
+<!-- The slideshow/carousel -->
+<div class="carousel-inner">
+<div class="carousel-item active">
+  <img src="img/Home.png" alt="TFA" class="d-block" height="500px"
+    width="100%">
+  <div class="carousel-caption">
+    <h1 style="font-size: 80px;"></h1>
+    <h3 style="font-size: 20px; margin-bottom: 200px;"></h3>
+
+  </div>
+</div>
+
+
+<!-- Left and right controls/icons -->
+<button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+  <span class="carousel-control-next-icon"></span>
+  </button>
+  </div>
+
+
+<!-- Main Code--------------------------------------------------------------------------------------------------->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TFA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="slider" style="
+            --width: 100px;
+            --height: 100px;
+            --quantity: 4;
+        ">
+           
+
+        <div class="slider" reverse="true" style="
+            --width: 200px;
+            --height: 200px;
+            --quantity: 4;
+        ">
+            <div class="list">
+                <div class="item" style="--position: 1"><img src="img/1.png" alt=""></div>
+                <div class="item" style="--position: 2"><img src="img/2.png" alt=""></div>
+                <div class="item" style="--position: 3"><img src="img/3.png" alt=""></div>
+                <div class="item" style="--position: 4"><img src="img/4.png" alt=""></div>
+                <div class="item" style="--position: 5"><img src="im" alt=""></div>
+                <div class="item" style="--position: 6"><img src="im" alt=""></div>
+                <div class="item" style="--position: 7"><img src="i" alt=""></div>
+                <div class="item" style="--position: 8"><img src="img" alt=""></div>
+                <div class="item" style="--position: 9"><img src="" alt=""></div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
+<div class="container mb-5">
+  <div class="row " >
+<center class="pt-5">
+<h5 class=" animated fs1">Our Services</h5>
+
+
+</center>
+</div>
+<div class="row">
+  <div class="col-md-6 col-sm-3 mt-4"></div>
+ 
+  
+  
+    
+  <div class="overlay">
+      
+    <div class="text"></div>
+  </div>
+</div>
+ 
+</div>
+
+<div class="col-md-6 col-sm-3 mt-4">
+  <div class="data2 fs2">
+    
+   
+        
+    </div>
+
+    
+    </p>
+  </div>
+
+</div>
+</div>
+</div>
+
+  
+
+<!-- <----------------------------------------------------------------------------------------------------------------------- -->
+
+
+
+
+
+
+</div>
+<div class="row mt-4 mb-3 " >
+  <div class="col-md-3 col-sm-3 mt-2">
+<div class="card"style="height:350px">
+ <div  class="card-img-top1">
+   <a href="service.html"><img  src="img/s.jpg" alt="Card image cap" class="image1" height="200px" width="50%">
+    <div class="overlay">
+      <div class="text "><B>SALES</B></div>
+    </div></a>
+  
+</div>
+  <div class="card-body ">
+    <h5 class="card-title fs2"><b>SALES</b> </h5>
+    <p class="card-text pb-4 fs3">We specialize in boosting sales through strategic marketing solutions, in-depth market research, trend analysis, and expert consulting.</p>
+    
+  </div>
+</div>
+</div>
+
+<div class="col-md-3 col-sm-3 mt-2">
+<div class="card"style="height:350px">
+  <div class="card-img-top1">
+    <a href="service1.html">
+  <img  src="img/markk.jpg" alt="Card image cap " class="image1" height="200px" width="50%">
+  <div class="overlay">
+    <div class="text"><b>MARKET RESEARCH</b></div>
+  </div>
+</a>
+</div>
+  <div class="card-body">
+    <h5 class="card-title fs2"><b>MARKET RESEARCH</b></h5>
+    <p class="card-text fs3">
+      we specialize in providing precise market insights to empower your business decisions. Our detailed analyses help you understand your audience, industry trends, and competitors.</p>
+    
+  </div>
+</div>
+</div>
+
+<div class="col-md-3 col-sm-3 mt-2">
+<div class="card" style="height:350px">
+  <div class="card-img-top1">
+  <img src="img/pexels-fauxels-3184465.jpg" alt="Card image cap" class="image1" height="200px" width="100%">
+  <div class="overlay">
+    <div class="text"><b>CONSULTATION</b></div>
+  </div>
+</div>
+  <div class="card-body">
+    <h5 class="card-title fs2"><b>CONSULTATION</b></h5>
+    <p class="card-text fs3">
+      we offer expert consultation to tackle any business challenge you face. Whether it's strategic planning, operational efficiency, or navigating market complexities, our tailored solutions are designed to drive your business forward.
+      </p>
+    
+  </div>
+</div>
+</div>
+
+<div class="col-md-3 col-sm-3 mt-2">
+<div class="card"style="height:350px">
+  <div class="card-img-top1">
+  <img src="img/ma.jpg" alt="Card image cap" class="image1" height="200px" width="50%">
+  <div class="overlay">
+    <div class="text"><b>MARKETING</b></div>
+  </div>
+</div>
+  <div class="card-body">
+    <h5 class="card-title fs2"><b>MARKETING</b></h5>
+    <p class="card-text fs3">we create personalized marketing strategies to help your business shine. From social media to SEO, we’ve got the tools and expertise to boost your brand and reach your audience effectively.</p>
+    
+  </div>
+</div>
+</div>
+</div>
+<!-- -------------------------------2nd part services -->
+
+
+</div>
+</div>
+</div>
+</div>
+
+<!-- comment------------------------------------------------------------------------------------------------ -->
+<div class="container mb-5">
+<div class="row " >
+<center class="">
+<h5 class="fs1 animated">People Says</h5>
+</center>
+</div>
+<div class="row">
+<div class="col-md-6 col-sm-3 mt-1">
+<div class="card c "style="height:200px">
+  <div class="card-body">
+   <p class="card-text mt-0 p-1 fs2"> "I can't recommend Thefineace enough for their sales expertise. They took the time to understand our challenges and delivered practical solutions that made a real difference. Our sales team is now more motivated and effective than ever!"
+    
+    
+    
+    </p>
+  </div>
+  <div class="row px-3">
+
+  
+  <p class="col-md-3 mt-0 fs3">— Jay P</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-sm-3 mt-1">
+<div class="card c1" style="height:200px">
+  <div class="card-body c1 ">
+   <p class="card-text mt-0 p-1 c1 fs2"> Amazing consulting services! Thefineace helped us overcome our challenges with practical solutions. Fantastic experience!""
+    </p>
+  </div>
+  <div class="row px-3">
+  
+    <p class="col-md-3 mt-0 fs3"> — rohan kumar</p>
+  </div>
+</div>
+</div>
+<div class="col-md-6 col-sm-3 mt-1 py-3">
+<div class="card c1"style="height:200px">
+  <div class="card-body">
+   <p class="card-text mt-0 p-1 fs2"> "Loved working with Thefineace! Our sales have skyrocketed, and the training was engaging and fun. Thanks a ton!"
+    
+    
+    
+    </p>
+  </div>
+  <div class="row px-3">
+  
+  <p class="col-md-3 mt-0 fs3">—  Mahi </p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-sm-3 mt-1 py-3">
+<div class="card c" style="height:200px">
+  <div class="card-body fs3 ">
+   <p class="card-text mt-0 p-1 fs2">  "Overall, I had a great experience with TFA; staff was incredibly smart and helpful, and the consultation were great."
+  </div>
+  <div class="row px-3 ">
+ 
+  <p class="col-md-3 mt-0 fs3">— james Broun</p>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+      
+        <a href="https://wa.me/7709708090" target="_blank" class="whatsapp-chat">
+            <img src="img/Screenshot 2024-07-01 192611.png" alt="" >
+            <span>Chat with Us</span>
+        </a>
+    </div>
+
+
+<!-- Footer ----------------------------- ------------------------------------------------------------------------>
+
+  
+<div class="Section bgcolor1 ">
+  <div class="container ">
+  <footer class="py-4 text-white">
+    <div class="row">
+      <center>
+        <b class="logo img-rounded ">
+          <img src="img/pixelcut-export (2).png" alt="TFA" style="width:50px; height: 40px;" />
+        </b>
+      </center>
+    </div>
+    <br>
+    <div class="row ">
+      <div class="col-6 col-md-2 mb-3 ">
+        <p class="fs2 fs textblack"><u><b>Usefull-Links</b></u></p>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link textblack fs2 " href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            
+         
+          </li>
+          <li class="nav-item fs2">
+            <a class="nav-link textblack " href="contact us.html">Contact us</a>
+          </li>
+         
+        </ul>
+      </div>
+      
+      <div class="col-6 col-md-2 mb-3 ">
+  
+        <p class="fs  fs2 textblack"><u><b>Social Media</b></u></p>
+        <a href="https://www.facebook.com/profile.php?id=100094502782021" class="fa fa-facebook bg-dark  pb-4 sm "></a>
+        <a href="https://www.instagram.com/tfa_biz/" class="fa fa-instagram bg-dark pb-4  sm" ></a>
+        <a href="https://www.twitter.com" class="fa fa-twitter bg-dark pb-4 sm"></a>
+      </div>
+  
+
+  
+      <div class="col-md-5 offset-md-1 mb-3 textblack">
+        <form>
+          <p class="fs fs2 "><u><b>Newsletter</b></u></p>
+          <p class="fs3">Subscribe newsletter to get updates</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <button class="btn btn-primary subbtn" type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  
+    <div class="d-flex flex-column flex-sm-row justify-content-between my-2 textblack  border-top py-4 fs fs1">
+      <p class="fs2">&copy; 2023 thefineace,All rights reserved.</p>
+  
+    </div>
+  </footer>
+  </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+  crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </body>
+  
+  </html>
