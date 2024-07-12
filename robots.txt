@@ -1,0 +1,13 @@
+# Allow all user agents to crawl the site
+User-agent: *
+
+# Disallow crawling of the following directories
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /junk/
+
+# Allow search engines to crawl everything else
+Allow: /
+
+# Indicate the location of the sitemap
+Sitemap: https://thefineace.com/sitemap.xml
