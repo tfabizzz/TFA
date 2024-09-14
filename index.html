@@ -649,21 +649,44 @@ body {
     </main>
     
 </body>
-  <!-- Calendly link widget begin -->
+ <!-- Calendly link widget begin -->
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
-<div style="display: flex; justify-content: center; align-items: center; height: 100px; background-color: #fff; padding: 10px 0; width: 100%;">
-    <div style="border: 2px solid #000; padding: 10px 20px; border-radius: 10px; width: 100%; max-width: 1000px; text-align: center; background-color: #fff;">
-
-        <h2 style="font-weight: bold; color: #000; margin-bottom: 10px;">Book an Appointment</h2>
+<div style="display: flex; justify-content: center; align-items: center; padding: 10px; width: 100%; box-sizing: border-box;">
+    <div style="border: 2px solid #000; padding: 15px 20px; border-radius: 10px; width: 100%; max-width: 1200px; text-align: center; background-color: #fff; box-sizing: border-box;">
+        
+        <h2 style="font-weight: bold; color: #000; margin-bottom: 10px; font-size: 18px;">Book an Appointment</h2>
         <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/thefineace'});return false;" 
-           style="font-weight: bold; font-size: 16px; text-decoration: none; color: #000; background-color: #f0f0f0; padding: 10px 20px; border-radius: 5px;">
+           style="font-weight: bold; font-size: 16px; text-decoration: none; color: #fff; background-color: #007bff; padding: 12px 20px; border-radius: 5px; display: inline-block;">
            Schedule Now
         </a>
     </div>
 </div>
+
+<style>
+    /* Mobile optimization */
+    @media (max-width: 768px) {
+        div[style*="display: flex"] {
+            padding: 10px;
+        }
+        
+        div[style*="border: 2px solid"] {
+            padding: 15px;
+        }
+        
+        h2 {
+            font-size: 16px;
+        }
+
+        a {
+            font-size: 14px;
+            padding: 10px 15px;
+        }
+    }
+</style>
 <!-- Calendly link widget end -->
+
 
 </html>
 <div class="container mb-5">
