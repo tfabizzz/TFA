@@ -579,13 +579,17 @@ body {
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
-<div style="text-align: center;">
-    <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/thefineace'});return false;" 
-       style="font-weight: bold; font-size: 18px; text-decoration: none;">
-       Book an Appointment
-    </a>
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <div style="border: 2px solid #000; padding: 20px; border-radius: 10px; max-width: 300px; text-align: center;">
+        <h2 style="font-weight: bold; margin-bottom: 20px;">Book an Appointment</h2>
+        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/thefineace'});return false;" 
+           style="font-weight: bold; font-size: 18px; text-decoration: none; color: #007bff;">
+           Schedule Now
+        </a>
+    </div>
 </div>
 <!-- Calendly link widget end -->
+
 
 
 </body>
