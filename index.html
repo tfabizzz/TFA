@@ -575,20 +575,6 @@ body {
 </div>
 
 <!-- Left and right controls/icons -->
-<!-- Calendly link widget begin -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-
-<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-    <div style="border: 2px solid #000; padding: 20px; border-radius: 10px; max-width: 300px; text-align: center;">
-        <h2 style="font-weight: bold; margin-bottom: 20px;">Book an Appointment</h2>
-        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/thefineace'});return false;" 
-           style="font-weight: bold; font-size: 18px; text-decoration: none; color: #007bff;">
-           Schedule Now
-        </a>
-    </div>
-</div>
-<!-- Calendly link widget end -->
 
 
 
@@ -705,6 +691,24 @@ body {
 
 <!-- <----------------------------------------------------------------------------------------------------------------------- -->
 
+<!-- Calendly link widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <div style="border: 2px solid #000; padding: 15px; border-radius: 10px; max-width: 250px; text-align: center; background-color: #007bff; position: relative;">
+        
+        <!-- Doodle image as background -->
+        <img src="your-doodle-image-url-here" alt="Booking Doodle" style="position: absolute; top: -40px; left: 50%; transform: translateX(-50%); width: 60px;">
+        
+        <h2 style="font-weight: bold; color: #fff; margin-bottom: 15px;">Book an Appointment</h2>
+        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/thefineace'});return false;" 
+           style="font-weight: bold; font-size: 16px; text-decoration: none; color: #fff; background-color: #000; padding: 10px 15px; border-radius: 5px; display: inline-block;">
+           Schedule Now
+        </a>
+    </div>
+</div>
+<!-- Calendly link widget end -->
 
 
 
