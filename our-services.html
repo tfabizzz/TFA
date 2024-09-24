@@ -1,79 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - TFA</title>
+  <style>
+    /* Navbar Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: black;
+      padding: 10px 20px;
+      color: white;
+    }
+
+    .navbar h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .navbar ul li {
+      margin-left: 20px;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .navbar ul li a:hover {
+      color: lightgray;
+    }
+
+    /* Responsive navbar */
+    @media (max-width: 768px) {
+      .navbar ul {
+        display: none;
+      }
+
+      .navbar .menu-icon {
+        display: block;
+        cursor: pointer;
+      }
+    }
+
+    /* Our Services Section */
+    #services {
+      background-color: black;
+      padding: 30px 0;
+    }
+
+    #services h2 {
+      text-align: center;
+      color: white;
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    #services p {
+      text-align: center;
+      color: white;
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .service-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .service-box {
+      background-color: #1a1a1a;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .service-box h3 {
+      color: white;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .service-box p {
+      color: #aaa;
+    }
+
+    /* Hover Effect */
+    .service-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 15px rgba(255, 255, 255, 0.1);
+    }
+
+    /* Responsive Grid */
+    @media (max-width: 768px) {
+      .service-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .service-container {
+        grid-template-columns: 1fr;
+      }
+
+      .navbar h1 {
+        font-size: 18px;
+      }
+    }
+
+    /* Menu Icon for Mobile */
+    .menu-icon {
+      font-size: 24px;
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+  <h1>TFA Consulting</h1>
+  <span class="menu-icon">&#9776;</span>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+
 <!-- Our Services Section -->
-<section id="services" style="background-color: black; padding: 50px 0;">
-  <div style="text-align: center; color: white; margin-bottom: 40px;">
-    <h2 style="font-size: 36px; font-weight: bold;">Our Services</h2>
-    <p style="font-size: 18px;">We offer a wide range of management consulting services designed to help your business thrive.</p>
-  </div>
+<section id="services">
+  <h2>Our Services</h2>
+  <p>We offer a wide range of management consulting services designed to help your business thrive.</p>
 
-  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+  <div class="service-container">
     <!-- Single Service Box -->
-    <div class="service-box" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; transition: transform 0.3s;">
-      <h3 style="color: white; font-size: 22px; margin-bottom: 10px;">Strategy Consulting</h3>
-      <p style="color: #aaa;">From corporate strategy to M&A, we help you define long-term goals and guide you through the acquisition process.</p>
+    <div class="service-box">
+      <h3>Strategy Consulting</h3>
+      <p>From corporate strategy to M&A, we help you define long-term goals and guide you through the acquisition process.</p>
     </div>
 
-    <div class="service-box" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; transition: transform 0.3s;">
-      <h3 style="color: white; font-size: 22px; margin-bottom: 10px;">Operations Consulting</h3>
-      <p style="color: #aaa;">Optimize your operations, improve efficiency, and streamline your supply chain with lean and Six Sigma methodologies.</p>
+    <div class="service-box">
+      <h3>Operations Consulting</h3>
+      <p>Optimize your operations, improve efficiency, and streamline your supply chain with lean and Six Sigma methodologies.</p>
     </div>
 
-    <div class="service-box" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; transition: transform 0.3s;">
-      <h3 style="color: white; font-size: 22px; margin-bottom: 10px;">Financial Advisory</h3>
-      <p style="color: #aaa;">Expert financial strategy, cost optimization, and capital structure solutions to ensure your company’s financial stability.</p>
+    <div class="service-box">
+      <h3>Financial Advisory</h3>
+      <p>Expert financial strategy, cost optimization, and capital structure solutions to ensure your company’s financial stability.</p>
     </div>
 
-    <div class="service-box" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; transition: transform 0.3s;">
-      <h3 style="color: white; font-size: 22px; margin-bottom: 10px;">HR & Organizational Consulting</h3>
-      <p style="color: #aaa;">We help design your organization for optimal performance, manage talent acquisition, and implement change management strategies.</p>
+    <div class="service-box">
+      <h3>HR & Organizational Consulting</h3>
+      <p>We help design your organization for optimal performance, manage talent acquisition, and implement change management strategies.</p>
     </div>
 
-    <div class="service-box" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; transition: transform 0.3s;">
-      <h3 style="color: white; font-size: 22px; margin-bottom: 10px;">Digital Transformation</h3>
-      <p style="color: #aaa;">We guide you through digital transformation, helping you leverage technology, data, and IT optimization to stay competitive.</p>
+    <div class="service-box">
+      <h3>Digital Transformation</h3>
+      <p>We guide you through digital transformation, helping you leverage technology, data, and IT optimization to stay competitive.</p>
     </div>
 
-    <div class="service-box" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; transition: transform 0.3s;">
-      <h3 style="color: white; font-size: 22px; margin-bottom: 10px;">Marketing and Sales Consulting</h3>
-      <p style="color: #aaa;">Develop high-performing sales strategies, branding, and CRM systems to boost your customer engagement and revenue.</p>
+    <div class="service-box">
+      <h3>Marketing and Sales Consulting</h3>
+      <p>Develop high-performing sales strategies, branding, and CRM systems to boost your customer engagement and revenue.</p>
     </div>
 
-    <div class="service-box" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; transition: transform 0.3s;">
-      <h3 style="color: white; font-size: 22px; margin-bottom: 10px;">Risk Management & Compliance</h3>
-      <p style="color: #aaa;">We help identify, assess, and mitigate risks while ensuring regulatory compliance across your business operations.</p>
+    <div class="service-box">
+      <h3>Risk Management & Compliance</h3>
+      <p>We help identify, assess, and mitigate risks while ensuring regulatory compliance across your business operations.</p>
     </div>
 
-    <div class="service-box" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; transition: transform 0.3s;">
-      <h3 style="color: white; font-size: 22px; margin-bottom: 10px;">Sustainability & ESG Consulting</h3>
-      <p style="color: #aaa;">Our sustainability experts develop strategies for minimizing environmental impact and meeting ESG goals.</p>
+    <div class="service-box">
+      <h3>Sustainability & ESG Consulting</h3>
+      <p>Our sustainability experts develop strategies for minimizing environmental impact and meeting ESG goals.</p>
     </div>
 
-    <div class="service-box" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; transition: transform 0.3s;">
-      <h3 style="color: white; font-size: 22px; margin-bottom: 10px;">Innovation & Product Development</h3>
-      <p style="color: #aaa;">We support your R&D efforts, bringing innovations to market faster and helping launch new products successfully.</p>
+    <div class="service-box">
+      <h3>Innovation & Product Development</h3>
+      <p>We support your R&D efforts, bringing innovations to market faster and helping launch new products successfully.</p>
     </div>
 
-    <div class="service-box" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; transition: transform 0.3s;">
-      <h3 style="color: white; font-size: 22px; margin-bottom: 10px;">M&A and Post-Merger Integration</h3>
-      <p style="color: #aaa;">We assist in M&A due diligence and ensure smooth integration of processes and cultures post-merger.</p>
+    <div class="service-box">
+      <h3>M&A and Post-Merger Integration</h3>
+      <p>We assist in M&A due diligence and ensure smooth integration of processes and cultures post-merger.</p>
     </div>
 
-    <div class="service-box" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; transition: transform 0.3s;">
-      <h3 style="color: white; font-size: 22px; margin-bottom: 10px;">Globalization & Market Entry</h3>
-      <p style="color: #aaa;">Expand your business internationally with our expert guidance on market entry, regulation, and consumer insights.</p>
+    <div class="service-box">
+      <h3>Globalization & Market Entry</h3>
+      <p>Expand your business internationally with our expert guidance on market entry, regulation, and consumer insights.</p>
     </div>
 
-    <div class="service-box" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; transition: transform 0.3s;">
-      <h3 style="color: white; font-size: 22px; margin-bottom: 10px;">Private Equity Consulting</h3>
-      <p style="color: #aaa;">Our private equity experts help manage portfolio companies to maximize value and assess investment strategies.</p>
+    <div class="service-box">
+      <h3>Private Equity Consulting</h3>
+      <p>Our private equity experts help manage portfolio companies to maximize value and assess investment strategies.</p>
     </div>
   </div>
 </section>
 
-<!-- CSS for Hover Effects -->
-<style>
-  .service-box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.1);
-  }
-</style>
-
+</body>
+</html>
