@@ -3,25 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Strategy Consulting - TFA</title>
-  <link rel="stylesheet" href="../styles.css"> <!-- Link your CSS file -->
+  <title>Strategy Consulting</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .service-header {
+      background-color: #000;
+      color: white;
+      padding: 30px;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    .service-content {
+      margin-top: 20px;
+    }
+
+    .service-content img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .service-steps {
+      margin-top: 30px;
+    }
+
+    .service-steps ol {
+      list-style-type: decimal;
+      padding-left: 20px;
+    }
+
+    .service-steps li {
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .cta a {
+      background-color: #000;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .cta a:hover {
+      background-color: #333;
+    }
+
+    /* Animation */
+    .fade-in {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Strategy Consulting</h1>
-  </header>
-  <main>
-    <section>
-      <h2>What We Offer</h2>
-      <p>Our strategy consulting services help you define long-term goals and guide you through business transformations.</p>
-    </section>
-    <section>
+
+  <div class="container">
+    <div class="service-header fade-in">
+      <h1>Strategy Consulting</h1>
+      <p>Helping you define long-term goals, improve competitiveness, and navigate mergers and acquisitions.</p>
+    </div>
+
+    <div class="service-content fade-in">
+      <h2>What is Strategy Consulting?</h2>
+      <p>We provide expert guidance to help businesses identify strategic opportunities, improve overall performance, and gain competitive advantages in the marketplace. Our team collaborates with your organization to ensure long-term growth and sustainability.</p>
+      <img src="strategy-consulting.jpg" alt="Strategy Consulting Image">
+    </div>
+
+    <div class="service-steps fade-in">
       <h2>How We Can Help You</h2>
-      <p>We craft competitive strategies, guide mergers, acquisitions, and more.</p>
-    </section>
-    <!-- Call to action button -->
-    <a href="/book-appointment" class="cta-button">Book a Consultation</a>
-  </main>
+      <ol>
+        <li>Initial consultation to understand your business challenges.</li>
+        <li>In-depth analysis of market trends and competitors.</li>
+        <li>Development of a comprehensive strategy roadmap.</li>
+        <li>Implementation support and ongoing monitoring.</li>
+        <li>Post-implementation review to ensure success.</li>
+      </ol>
+    </div>
+
+    <div class="cta fade-in">
+      <h2>Book a Call with Us</h2>
+      <p>Ready to take your business to the next level? Schedule a consultation with one of our experts.</p>
+      <a href="https://calendly.com/your-calendar-link">Book Now</a>
+    </div>
+  </div>
+
 </body>
 </html>
- 
