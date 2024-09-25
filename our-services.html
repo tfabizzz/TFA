@@ -8,7 +8,7 @@
     /* Navbar Styles */
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       background-color: navy; /* Set the entire page background to navy */
       color: white; /* Default text color to white for contrast */
     }
@@ -20,11 +20,13 @@
       background-color: black;
       padding: 10px 20px;
       color: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Shadow for navbar */
     }
 
     .navbar h1 {
       margin: 0;
-      font-size: 24px;
+      font-size: 26px; /* Slightly larger font size */
+      font-weight: bold;
     }
 
     .navbar ul {
@@ -42,38 +44,43 @@
       color: white;
       text-decoration: none;
       font-size: 16px;
+      transition: color 0.3s; /* Smooth transition for color change */
     }
 
     .navbar ul li a:hover {
-      color: lightgray;
+      color: gold; /* Change to gold on hover */
     }
 
     /* Our Services Section */
     #services {
       background-color: navy; /* Background color of the services section */
-      padding: 30px 0;
+      padding: 50px 0; /* Increased padding for better spacing */
     }
 
     #services h2 {
       text-align: center;
       color: gold; /* Gold color for the title */
-      font-size: 42px;
+      font-size: 48px; /* Larger font size for better impact */
       font-weight: bold;
       margin-bottom: 20px;
       animation: fadeIn 1s; /* Animation for the title */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
     }
 
     #services p {
       text-align: center;
       color: white; /* Change paragraph text color to white for visibility */
-      font-size: 18px;
+      font-size: 20px; /* Slightly larger font size */
       margin-bottom: 40px;
+      max-width: 600px; /* Limit width for readability */
+      margin-left: auto; /* Centering */
+      margin-right: auto; /* Centering */
     }
 
     .service-container {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+      gap: 30px; /* Increased gap between boxes */
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
@@ -81,29 +88,32 @@
 
     .service-box {
       background-color: beige; /* Beige background for the boxes */
-      padding: 15px;
+      padding: 20px; /* Increased padding */
       border: 2px solid gold; /* Gold border for the boxes */
-      border-radius: 10px;
+      border-radius: 15px; /* Rounded corners */
       text-align: center;
       transition: transform 0.3s, box-shadow 0.3s; /* Animation on hover */
       animation: slideIn 0.5s; /* Animation for each service box */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
     }
 
     .service-box h3 {
       color: black; /* Black color for titles */
-      font-size: 24px;
+      font-size: 28px; /* Increased font size for titles */
       margin-bottom: 10px;
+      font-weight: bold; /* Bold titles for emphasis */
     }
 
     .service-box p {
       color: black; /* Black color for descriptions */
-      font-size: 14px;
+      font-size: 16px; /* Adjusted font size for better readability */
+      line-height: 1.5; /* Increased line height for spacing */
     }
 
     /* Hover Effect */
     .service-box:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 15px rgba(255, 215, 0, 0.5); /* Gold shadow effect */
+      transform: translateY(-5px); /* Slight lift effect */
+      box-shadow: 0 10px 20px rgba(255, 215, 0, 0.5); /* Gold shadow effect */
     }
 
     /* Responsive Grid */
@@ -119,7 +129,7 @@
       }
 
       .navbar h1 {
-        font-size: 18px;
+        font-size: 20px;
       }
     }
 
@@ -138,7 +148,7 @@
     footer {
       background-color: #333;
       color: white;
-      padding: 20px 0;
+      padding: 30px 0; /* Increased padding for footer */
       text-align: center;
     }
 
@@ -151,13 +161,13 @@
 
     footer .social-links a {
       color: white;
-      font-size: 18px;
+      font-size: 20px; /* Increased font size for social links */
       text-decoration: none;
       transition: color 0.3s;
     }
 
     footer .social-links a:hover {
-      color: lightgray;
+      color: gold; /* Change to gold on hover */
     }
 
     footer .footer-nav {
@@ -168,10 +178,11 @@
       color: white;
       text-decoration: none;
       margin: 0 15px;
+      transition: color 0.3s; /* Smooth transition for color change */
     }
 
     footer .footer-nav a:hover {
-      color: lightgray;
+      color: gold; /* Change to gold on hover */
     }
 
     footer .contact-info {
@@ -184,7 +195,7 @@
     }
 
     footer .contact-info a:hover {
-      color: lightgray;
+      color: gold; /* Change to gold on hover */
     }
   </style>
 </head>
@@ -232,31 +243,6 @@
       <p>We guide you through digital transformation, helping you leverage technology, data, and IT optimization to stay competitive.</p>
     </div>
 
-    <div class="service-box" onclick="location.href='https://thefineace.com/marketing-sales-consulting.html'">
-      <h3>Marketing and Sales Consulting</h3>
-      <p>Develop high-performing sales strategies, branding, and CRM systems to boost your customer engagement and revenue.</p>
-    </div>
-
-    <div class="service-box" onclick="location.href='https://thefineace.com/risk-management-compliance.html'">
-      <h3>Risk Management & Compliance</h3>
-      <p>We help identify, assess, and mitigate risks while ensuring regulatory compliance across your business operations.</p>
-    </div>
-
-    <div class="service-box" onclick="location.href='https://thefineace.com/sustainability-esg-consulting.html'">
-      <h3>Sustainability & ESG Consulting</h3>
-      <p>Our sustainability experts develop strategies for minimizing environmental impact and meeting ESG goals.</p>
-    </div>
-
-    <div class="service-box" onclick="location.href='https://thefineace.com/innovation-product-development.html'">
-      <h3>Innovation & Product Development</h3>
-      <p>We support your R&D efforts, bringing innovations to market faster and helping launch new products successfully.</p>
-    </div>
-
-    <div class="service-box" onclick="location.href='https://thefineace.com/ma-post-merger-integration.html'">
-      <h3>M&A and Post-Merger Integration</h3>
-      <p>We assist in M&A due diligence and ensure smooth integration of processes and cultures post-merger.</p>
-    </div>
-
     <div class="service-box" onclick="location.href='https://thefineace.com/training-development.html'">
       <h3>Training & Development</h3>
       <p>Tailored training programs designed to enhance employee skills and improve organizational performance.</p>
@@ -286,4 +272,5 @@
 
 </body>
 </html>
+
 
