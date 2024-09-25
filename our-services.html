@@ -24,7 +24,6 @@
     .navbar h1 {
       margin: 0;
       font-size: 24px;
-      color: gold; /* Gold color for branding */
     }
 
     .navbar ul {
@@ -52,15 +51,24 @@
     #services {
       background-color: white;
       padding: 30px 0;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     #services h2 {
       text-align: center;
-      color: navy; /* Navy color for headings */
+      color: gold;
       font-size: 42px;
       font-weight: bold;
       margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
 
     #services p {
@@ -80,24 +88,35 @@
     }
 
     .service-box {
-      background-color: #1a1a1a; /* Dark background for boxes */
+      background-color: beige;
       padding: 15px;
       border-radius: 10px;
       text-align: center;
+      border: 2px solid navy;
       transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer; /* Change cursor to pointer */
-      position: relative; /* For the hover effect */
-      overflow: hidden; /* To hide the overflow during animation */
+      cursor: pointer;
+      animation: slideIn 0.5s ease-in-out; /* Add slide-in animation */
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
 
     .service-box h3 {
-      color: gold; /* Gold color for titles */
+      color: black; /* Title color */
       font-size: 24px;
       margin-bottom: 10px;
     }
 
     .service-box p {
-      color: beige; /* Beige color for paragraph text */
+      color: black; /* Description color */
       font-size: 14px;
     }
 
@@ -105,30 +124,6 @@
     .service-box:hover {
       transform: scale(1.05);
       box-shadow: 0 8px 15px rgba(255, 215, 0, 0.5); /* Gold shadow on hover */
-    }
-
-    /* Animation */
-    .service-box::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 300%;
-      height: 300%;
-      background: rgba(255, 215, 0, 0.2); /* Light gold overlay */
-      border-radius: 50%;
-      transform: translate(-50%, -50%) scale(0);
-      transition: transform 0.6s ease-out;
-      z-index: 0; /* Send behind the content */
-    }
-
-    .service-box:hover::after {
-      transform: translate(-50%, -50%) scale(1);
-    }
-
-    .service-box > * {
-      position: relative; /* For the content above the overlay */
-      z-index: 1; /* Bring content above the overlay */
     }
 
     /* Responsive Grid */
@@ -206,7 +201,7 @@
 
 <!-- Navbar -->
 <div class="navbar">
-    <a href="https://thefineace.com/" style="color: gold; font-size: 24px; font-weight: bold; text-decoration: none;">TFA</a>
+    <a href="https://thefineace.com/" style="color: white; font-size: 24px; font-weight: bold; text-decoration: none;">TFA</a>
     <ul class="nav-links">
       <li><a href="https://thefineace.com/">Home</a></li>
       <li><a href="#services">Services</a></li>
@@ -236,7 +231,7 @@
       <p>Expert financial strategy, cost optimization, and capital structure solutions to ensure your company’s financial stability.</p>
     </div>
 
-    <div class="service-box" onclick="location.href='hr-organizational-consulting.html'">
+    <div class="service-box" onclick="location.href='hr-consulting.html'">
       <h3>HR & Organizational Consulting</h3>
       <p>We help design your organization for optimal performance, manage talent acquisition, and implement change management strategies.</p>
     </div>
@@ -251,12 +246,12 @@
       <p>Develop high-performing sales strategies, branding, and CRM systems to boost your customer engagement and revenue.</p>
     </div>
 
-    <div class="service-box" onclick="location.href='risk-management-compliance.html'">
+    <div class="service-box" onclick="location.href='risk-management.html'">
       <h3>Risk Management & Compliance</h3>
       <p>We help identify, assess, and mitigate risks while ensuring regulatory compliance across your business operations.</p>
     </div>
 
-    <div class="service-box" onclick="location.href='sustainability-esg-consulting.html'">
+    <div class="service-box" onclick="location.href='sustainability-consulting.html'">
       <h3>Sustainability & ESG Consulting</h3>
       <p>Our sustainability experts develop strategies for minimizing environmental impact and meeting ESG goals.</p>
     </div>
@@ -266,37 +261,37 @@
       <p>We support your R&D efforts, bringing innovations to market faster and helping launch new products successfully.</p>
     </div>
 
-    <div class="service-box" onclick="location.href='ma-post-merger-integration.html'">
+    <div class="service-box" onclick="location.href='ma-post-merger.html'">
       <h3>M&A and Post-Merger Integration</h3>
       <p>We assist in M&A due diligence and ensure smooth integration of processes and cultures post-merger.</p>
     </div>
 
-    <div class="service-box" onclick="location.href='financial-modeling-analysis.html'">
-      <h3>Financial Modeling & Analysis</h3>
-      <p>Create robust financial models to guide your decision-making, investment analysis, and forecasting.</p>
+    <div class="service-box" onclick="location.href='globalization-market-entry.html'">
+      <h3>Globalization & Market Entry</h3>
+      <p>Expand your business internationally with our expert guidance on market entry, regulation, and consumer insights.</p>
     </div>
 
-    <div class="service-box" onclick="location.href='data-analytics-insights.html'">
-      <h3>Data Analytics & Insights</h3>
-      <p>Utilize data analytics to drive strategic decisions, operational improvements, and customer insights.</p>
+    <div class="service-box" onclick="location.href='private-equity-consulting.html'">
+      <h3>Private Equity Consulting</h3>
+      <p>Our private equity experts help manage portfolio companies to maximize value and assess investment strategies.</p>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
+<!-- Footer Section -->
 <footer>
   <div class="social-links">
-    <a href="#">Facebook</a>
-    <a href="#">Twitter</a>
-    <a href="#">LinkedIn</a>
-    <a href="#">Instagram</a>
+    <a href="https://instagram.com/thefineace" target="_blank">Instagram</a>
+    <a href="https://www.linkedin.com/company/thefineace" target="_blank">LinkedIn</a>
+    <a href="https://www
+    <a href="https://twitter.com/thefineace" target="_blank">Twitter</a>
   </div>
   <div class="footer-nav">
-    <a href="#">Privacy Policy</a> | 
-    <a href="#">Terms of Service</a>
+    <a href="#services">Services</a>
+    <a href="https://thefineace.com/contact%20us.html">Contact</a>
   </div>
   <div class="contact-info">
-    <p>Contact us: <a href="mailto:info@thefineace.com">info@thefineace.com</a></p>
+    <p>Contact us at: <a href="mailto:info@thefineace.com">info@thefineace.com</a></p>
   </div>
 </footer>
 
