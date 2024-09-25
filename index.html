@@ -1229,7 +1229,7 @@ body {
 
     .service-box {
       background: rgba(255, 255, 255, 0.15); /* Semi-transparent effect */
-      color: #000000; /* Black text for better readability */
+      color: #2E2E2E; /* Dark gray text for better readability */
       border: 2px solid #FFD700; /* Gold border */
       padding: 25px;
       width: 320px;
@@ -1238,42 +1238,41 @@ body {
       text-align: center;
       position: relative;
       overflow: hidden;
-      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      transition: transform 0.6s ease, box-shadow 0.6s ease;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-      animation: floating 3s ease-in-out infinite; /* Floating animation */
+      animation: standout-animation 1s ease forwards; /* Cool standout animation */
     }
 
-    /* Floating Animation */
-    @keyframes floating {
+    /* Standout Animation: Enlarges and stands out */
+    @keyframes standout-animation {
       0% {
-        transform: translateY(0px);
-      }
-      50% {
-        transform: translateY(-10px);
+        transform: scale(0.8) rotate(0deg);
+        opacity: 0;
       }
       100% {
-        transform: translateY(0px);
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
       }
     }
 
     /* Bold Titles and Text */
     .service-box h3 {
       font-family: 'Playfair Display', serif;
-      color: #FFD700; /* Gold title text */
+      color: #000000; /* Black color for titles */
       font-size: 26px;
       margin-bottom: 12px;
       font-weight: bold; /* Bold titles */
     }
 
     .service-box p {
-      color: #000000; /* Black description text */
+      color: #000000; /* Black color for description text */
       font-size: 16px;
-      font-weight: bold; /* Bold description text */
+      font-weight: normal; /* Normal description text */
     }
 
     /* Hover Effect: Elevation and slight rotation */
     .service-box:hover {
-      transform: translateY(-5px) rotate(1deg); /* Slight upward movement and tilt */
+      transform: translateY(-10px) rotate(3deg); /* Upward movement with slight tilt */
       box-shadow: 0 20px 40px rgba(255, 215, 0, 0.5); /* Gold shadow */
     }
 
