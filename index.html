@@ -1208,13 +1208,13 @@ body {
     }
 
     #services {
-      background-color: #f0f0f0; /* Gray background for the section */
+      background-color: #001f3f; /* Navy blue background */
       padding: 60px 0;
     }
 
     #services h2 {
       font-family: 'Playfair Display', serif;
-      color: #333333; /* Dark text for contrast */
+      color: #ffffff; /* White text for the section title */
       font-size: 42px;
       font-weight: bold;
       margin-bottom: 20px;
@@ -1222,51 +1222,72 @@ body {
     }
 
     #services p {
-      color: #555555; /* Dark gray text */
+      color: #dddddd; /* Light gray text */
       font-size: 18px;
       margin-bottom: 40px;
       text-align: center;
     }
 
     .service-box {
-      background: rgba(200, 200, 200, 0.9); /* Light gray background for boxes */
-      color: #000000; /* Black text for visibility */
-      border: 2px solid #333333; /* Dark border for contrast */
+      background: rgba(255, 255, 255, 0.1); /* Glass-like transparent effect */
+      color: #ffffff; /* White text inside the boxes */
+      border: 2px solid #f1f1f1; /* Subtle white border */
       padding: 25px;
       width: 320px;
       border-radius: 12px;
       text-decoration: none;
       text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       position: relative;
-      overflow: hidden; /* Hide overflowing elements */
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
     }
 
     .service-box h3 {
       font-family: 'Playfair Display', serif;
-      color: #000000; /* Black text */
+      color: #ffffff; /* White title text */
       font-size: 24px;
       margin-bottom: 12px;
-      font-weight: bold; /* Bold text */
-      animation: pop 0.5s ease-in-out; /* Unique pop effect */
+      font-weight: bold; /* Bold title */
+      position: relative;
+      animation: fly-in 1s ease forwards; /* Bold, fly-in animation */
     }
 
-    @keyframes pop {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
+    @keyframes fly-in {
+      0% {
+        transform: rotateX(90deg) translateY(-100px); /* Initial fold effect */
+        opacity: 0;
+      }
+      100% {
+        transform: rotateX(0deg) translateY(0); /* Straightens up */
+        opacity: 1;
+      }
+    }
+
+    @keyframes fly-away {
+      0% {
+        transform: translateX(0) translateY(0); /* Initial position */
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(300px) translateY(-200px) rotate(45deg); /* Flying away effect */
+        opacity: 0;
+      }
     }
 
     .service-box p {
-      color: #333333; /* Dark gray text */
+      color: #dddddd; /* Light gray text for descriptions */
       font-size: 16px;
       font-weight: bold; /* Bold text for emphasis */
     }
 
+    .service-box:hover h3 {
+      animation: fly-away 0.8s ease forwards; /* Fly away on hover */
+    }
+
     .service-box:hover {
-      transform: scale(1.05) rotate(1deg); /* Slight scale and rotation on hover */
-      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+      transform: scale(1.05) rotate(2deg); /* Slight scaling and rotation */
+      box-shadow: 0 15px 25px rgba(255, 255, 255, 0.3);
     }
 
     /* Service Box Container */
@@ -1322,6 +1343,7 @@ body {
 
 </body>
 </html>
+
 
 
 
