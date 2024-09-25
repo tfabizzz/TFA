@@ -200,6 +200,109 @@
     footer .contact-info a:hover {
       color: lightgray;
     }
+    <style>
+  /* Our Services Section */
+  #services {
+    background-color: white;
+    padding: 30px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #services h2 {
+    text-align: center;
+    color: black;
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  #services p {
+    text-align: center;
+    color: black;
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .service-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .service-box {
+    background-color: white; /* Changed background color to white */
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-box h3 {
+    color: black; /* Adjusted text color for readability */
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .service-box p {
+    color: #333; /* Adjusted text color for better contrast */
+    font-size: 14px;
+  }
+
+  /* Hover Effect */
+  .service-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.1);
+  }
+
+  .service-box a {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+  }
+
+  .service-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 0;
+  }
+
+  .service-box:hover::after {
+    opacity: 1;
+  }
+
+  /* Responsive Grid */
+  @media (max-width: 768px) {
+    .service-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .service-container {
+      grid-template-columns: 1fr;
+    }
+
+    .navbar h1 {
+      font-size: 18px;
+    }
+  }
+</style>
+
   </style>
 </head>
 <body>
