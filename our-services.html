@@ -5,15 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Services - TFA</title>
   <style>
-    /* General Styles */
+    /* Navbar Styles */
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-family: Arial, sans-serif;
       background-color: #f4f4f4;
-      color: #333;
     }
 
-    /* Navbar Styles */
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -21,15 +19,11 @@
       background-color: black;
       padding: 10px 20px;
       color: white;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     }
 
     .navbar h1 {
       margin: 0;
       font-size: 24px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px;
     }
 
     .navbar ul {
@@ -47,26 +41,23 @@
       color: white;
       text-decoration: none;
       font-size: 16px;
-      transition: color 0.3s;
     }
 
     .navbar ul li a:hover {
-      color: gold; /* Change hover color to gold */
+      color: lightgray;
     }
 
     /* Our Services Section */
     #services {
       background-color: white;
-      padding: 50px 0;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      border-radius: 15px;
-      margin: 20px;
+      padding: 30px 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     #services h2 {
       text-align: center;
-      color: navy;
-      font-size: 48px;
+      color: black;
+      font-size: 42px;
       font-weight: bold;
       margin-bottom: 20px;
     }
@@ -74,7 +65,7 @@
     #services p {
       text-align: center;
       color: black;
-      font-size: 20px;
+      font-size: 18px;
       margin-bottom: 40px;
     }
 
@@ -89,52 +80,55 @@
 
     .service-box {
       background-color: #1a1a1a;
-      padding: 20px;
+      padding: 15px;
       border-radius: 10px;
       text-align: center;
       transition: transform 0.3s, box-shadow 0.3s;
       position: relative;
-      overflow: hidden; /* Hide overflow for the animation */
+      overflow: hidden;
     }
 
     .service-box h3 {
-      color: gold; /* Set title color to gold */
-      font-size: 28px;
+      color: white;
+      font-size: 24px;
       margin-bottom: 10px;
     }
 
     .service-box p {
-      color: white; /* Set paragraph text color to white */
-      font-size: 16px;
-      transition: color 0.3s; /* Smooth color transition */
+      color: gray;
+      font-size: 14px;
     }
 
     /* Hover Effect */
     .service-box:hover {
       transform: scale(1.05);
-      box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 15px rgba(255, 255, 255, 0.1);
     }
 
-    .service-box:hover p {
-      color: lightgray; /* Change paragraph color on hover */
+    .service-box a {
+      display: block;
+      height: 100%;
+      color: inherit;
+      text-decoration: none;
+      position: relative;
+      z-index: 1;
     }
 
-    /* Animated Background */
-    .service-box::before {
+    .service-box::after {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.2);
-      transition: opacity 0.5s;
-      z-index: 0; /* Behind the text */
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
       opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 0;
     }
 
-    .service-box:hover::before {
-      opacity: 1; /* Show overlay on hover */
+    .service-box:hover::after {
+      opacity: 1;
     }
 
     /* Responsive Grid */
@@ -177,7 +171,7 @@
     }
 
     footer .social-links a:hover {
-      color: gold; /* Change hover color to gold */
+      color: lightgray;
     }
 
     footer .footer-nav {
@@ -191,7 +185,7 @@
     }
 
     footer .footer-nav a:hover {
-      color: gold; /* Change hover color to gold */
+      color: lightgray;
     }
 
     footer .contact-info {
@@ -204,7 +198,7 @@
     }
 
     footer .contact-info a:hover {
-      color: gold; /* Change hover color to gold */
+      color: lightgray;
     }
   </style>
 </head>
@@ -227,79 +221,115 @@
 
   <div class="service-container">
     <!-- Single Service Box -->
-    <a href="strategy-consulting.html" class="service-box">
-      <h3>Strategy Consulting</h3>
-      <p>From corporate strategy to M&A, we help you define long-term goals and guide you through the acquisition process.</p>
-    </a>
+    <div class="service-box">
+      <a href="https://thefineace.com/strategy-consulting.html">
+        <h3>Strategy Consulting</h3>
+        <p>From corporate strategy to M&A, we help you define long-term goals and guide you through the acquisition process.</p>
+      </a>
+    </div>
 
-    <a href="operations-consulting.html" class="service-box">
-      <h3>Operations Consulting</h3>
-      <p>Optimize your operations, improve efficiency, and streamline your supply chain with lean and Six Sigma methodologies.</p>
-    </a>
+    <div class="service-box">
+      <a href="https://thefineace.com/operations-consulting.html">
+        <h3>Operations Consulting</h3>
+        <p>Optimize your operations, improve efficiency, and streamline your supply chain with lean and Six Sigma methodologies.</p>
+      </a>
+    </div>
 
-    <a href="financial-advisory.html" class="service-box">
-      <h3>Financial Advisory</h3>
-      <p>Expert financial strategy, cost optimization, and capital structure solutions to ensure your company’s financial stability.</p>
-    </a>
+    <div class="service-box">
+      <a href="https://thefineace.com/financial-advisory.html">
+        <h3>Financial Advisory</h3>
+        <p>Expert financial strategy, cost optimization, and capital structure solutions to ensure your company’s financial stability.</p>
+      </a>
+    </div>
 
-    <a href="hr-organizational-consulting.html" class="service-box">
-      <h3>HR & Organizational Consulting</h3>
-      <p>We help design your organization for optimal performance, manage talent acquisition, and implement change management strategies.</p>
-    </a>
+    <div class="service-box">
+      <a href="https://thefineace.com/hr-consulting.html">
+        <h3>HR & Organizational Consulting</h3>
+        <p>We help design your organization for optimal performance, manage talent acquisition, and implement change management strategies.</p>
+      </a>
+    </div>
 
-    <a href="digital-transformation.html" class="service-box">
-      <h3>Digital Transformation</h3>
-      <p>We guide you through digital transformation, helping you leverage technology, data, and IT optimization to stay competitive.</p>
-    </a>
+    <div class="service-box">
+      <a href="https://thefineace.com/digital-transformation.html">
+        <h3>Digital Transformation</h3>
+        <p>We guide you through digital transformation, helping you leverage technology, data, and IT optimization to stay competitive.</p>
+      </a>
+    </div>
 
-    <a href="marketing-sales-consulting.html" class="service-box">
-      <h3>Marketing and Sales Consulting</h3>
-      <p>Develop high-performing sales strategies, branding, and CRM systems to boost your customer engagement and revenue.</p>
-    </a>
+    <div class="service-box">
+      <a href="https://thefineace.com/marketing-consulting.html">
+        <h3>Marketing and Sales Consulting</h3>
+        <p>Develop high-performing sales strategies, branding, and CRM systems to boost your customer engagement and revenue.</p>
+      </a>
+    </div>
 
-    <a href="risk-management-compliance.html" class="service-box">
-      <h3>Risk Management & Compliance</h3>
-      <p>We help identify, assess, and mitigate risks while ensuring regulatory compliance across your business operations.</p>
-    </a>
+    <div class="service-box">
+      <a href="https://thefineace.com/risk-management.html">
+        <h3>Risk Management & Compliance</h3>
+        <p>We help identify, assess, and mitigate risks while ensuring regulatory compliance across your business operations.</p>
+      </a>
+    </div>
 
-    <a href="sustainability-esg-consulting.html" class="service-box">
-      <h3>Sustainability & ESG Consulting</h3>
-      <p>Our sustainability experts develop strategies for minimizing environmental impact and meeting ESG goals.</p>
-    </a>
+    <div class="service-box">
+      <a href="https://thefineace.com/sustainability-consulting.html">
+        <h3>Sustainability & ESG Consulting</h3>
+        <p>Our sustainability experts develop strategies for minimizing environmental impact and meeting ESG goals.</p>
+      </a>
+    </div>
 
-    <a href="innovation-product-development.html" class="service-box">
-      <h3>Innovation & Product Development</h3>
-      <p>We support your R&D efforts, bringing innovations to market faster and helping launch new products successfully.</p>
-    </a>
+    <div class="service-box">
+      <a href="https://thefineace.com/product-development.html">
+        <h3>Innovation & Product Development</h3>
+        <p>We support your R&D efforts, bringing innovations to market faster and helping launch new products successfully.</p>
+      </a>
+    </div>
 
-    <a href="ma-post-merger-integration.html" class="service-box">
-      <h3>M&A and Post-Merger Integration</h3>
-      <p>We assist in M&A due diligence and ensure smooth integration of processes and cultures post-merger.</p>
-    </a>
+    <div class="service-box">
+      <a href="https://thefineace.com/ma-integration.html">
+        <h3>M&A and Post-Merger Integration</h3>
+        <p>We assist in M&A due diligence and ensure smooth integration of processes and cultures post-merger.</p>
+      </a>
+    </div>
 
-    <a href="global-business-development.html" class="service-box">
-      <h3>Global Business Development</h3>
-      <p>We provide insights and strategies for expanding your business into new global markets effectively.</p>
-    </a>
+    <div class="service-box">
+      <a href="https://thefineace.com/globalization.html">
+        <h3>Globalization & Market Expansion</h3>
+        <p>Strategically expand into new markets and navigate global challenges with our tailored consulting services.</p>
+      </a>
+    </div>
+
+    <div class="service-box">
+      <a href="https://thefineace.com/technology-advisory.html">
+        <h3>Technology Advisory</h3>
+        <p>We help you make informed technology investments, ensuring alignment with your strategic objectives.</p>
+      </a>
+    </div>
+
+    <div class="service-box">
+      <a href="https://thefineace.com/branding.html">
+        <h3>Brand Strategy</h3>
+        <p>Our branding experts help define and communicate your brand identity effectively to your target audience.</p>
+      </a>
+    </div>
+
   </div>
 </section>
 
 <!-- Footer -->
 <footer>
-    <div class="social-links">
-      <a href="#">Facebook</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">Twitter</a>
-      <a href="#">Instagram</a>
-    </div>
-    <div class="footer-nav">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
-    </div>
-    <div class="contact-info">
-      <p>Contact us: <a href="mailto:info@thefineace.com">info@thefineace.com</a></p>
-    </div>
+  <div class="social-links">
+    <a href="#">Facebook</a>
+    <a href="#">Twitter</a>
+    <a href="#">LinkedIn</a>
+  </div>
+  <div class="footer-nav">
+    <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+  </div>
+  <div class="contact-info">
+    <p>Contact us at: <a href="mailto:info@thefineace.com">info@thefineace.com</a></p>
+  </div>
 </footer>
 
 </body>
 </html>
+
