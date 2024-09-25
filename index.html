@@ -1191,8 +1191,6 @@ body {
 
 
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1210,7 +1208,7 @@ body {
     }
 
     #services {
-      background-color: #ffffff; /* Light background for contrast */
+      background-color: #f0f0f0; /* Gray background for the section */
       padding: 60px 0;
     }
 
@@ -1231,9 +1229,9 @@ body {
     }
 
     .service-box {
-      background: rgba(0, 0, 0, 0.6); /* Darker background for boxes */
-      color: #ffffff; /* White text for visibility */
-      border: 2px solid #f4e8c1; /* Luxurious gold border */
+      background: rgba(200, 200, 200, 0.9); /* Light gray background for boxes */
+      color: #000000; /* Black text for visibility */
+      border: 2px solid #333333; /* Dark border for contrast */
       padding: 25px;
       width: 320px;
       border-radius: 12px;
@@ -1242,31 +1240,32 @@ body {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       position: relative;
       overflow: hidden; /* Hide overflowing elements */
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     }
 
     .service-box h3 {
       font-family: 'Playfair Display', serif;
-      color: #f4e8c1; /* Gold text */
+      color: #000000; /* Black text */
       font-size: 24px;
       margin-bottom: 12px;
       font-weight: bold; /* Bold text */
-      animation: bounce 1s infinite; /* Animation for title */
+      animation: pop 0.5s ease-in-out; /* Unique pop effect */
     }
 
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+    @keyframes pop {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
     }
 
     .service-box p {
-      color: #cccccc; /* Light gray text */
+      color: #333333; /* Dark gray text */
       font-size: 16px;
       font-weight: bold; /* Bold text for emphasis */
     }
 
     .service-box:hover {
-      transform: scale(1.1) rotate(2deg); /* Slight scale and rotation on hover */
+      transform: scale(1.05) rotate(1deg); /* Slight scale and rotation on hover */
       box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
     }
 
@@ -1279,17 +1278,6 @@ body {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
-    }
-
-    /* Animation for Service Boxes */
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
-
-    .service-box {
-      animation: pulse 2s infinite; /* Pulsing animation */
     }
 
     /* Mobile Responsive */
@@ -1334,6 +1322,7 @@ body {
 
 </body>
 </html>
+
 
 
 
