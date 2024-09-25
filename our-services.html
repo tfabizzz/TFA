@@ -7,52 +7,7 @@
   <style>
 
 
-  .service-box {
-  background-color: white;
-  padding: 15px;
-  border-radius: 10px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 30px; /* Add space between boxes */
-}
-
-.service-box h3 {
-  color: black;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.service-box p {
-  color: #333;
-  font-size: 14px;
-}
-
-/* Golden line under each box */
-.service-box::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 4px;
-  background-color: gold; /* Gold color for the line */
-  transition: width 0.3s ease;
-}
-
-/* Hover Effect */
-.service-box:hover::after {
-  width: 100%; /* Expand the line on hover */
-}
-
-.service-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 15px rgba(255, 255, 255, 0.1);
-}
-
-
+  
 
 
 body {
@@ -358,6 +313,60 @@ body {
 
     .navbar h1 {
       font-size: 18px;
+
+
+
+.service-box {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px; /* Add space between boxes */
+}
+
+.service-box h3 {
+  color: black;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  color: #333;
+  font-size: 14px;
+}
+
+/* Golden line under each box */
+.service-box::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 4px;
+  background-color: gold; /* Gold color for the line */
+  transition: width 0.3s ease;
+}
+
+/* Hover Effect */
+.service-box:hover::after {
+  width: 100%; /* Expand the line on hover */
+}
+
+.service-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+
+
+      
     }
   }
 </style>
