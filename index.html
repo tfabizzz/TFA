@@ -1229,7 +1229,7 @@ body {
 
     .service-box {
       background: #ffffff; /* Solid white background */
-      color: #000000; /* Black text for better readability */
+      color: #000000; /* Ensure black text */
       border: 2px solid #FFD700; /* Gold border */
       padding: 25px;
       width: 320px;
@@ -1255,19 +1255,19 @@ body {
       }
     }
 
-    /* Bold Titles and Text */
+    /* Force Titles and Text to Black */
     .service-box h3 {
       font-family: 'Playfair Display', serif;
-      color: #000000; /* Black color for titles */
+      color: #000000 !important; /* Pure black title */
       font-size: 26px;
       margin-bottom: 12px;
       font-weight: bold; /* Bold titles */
     }
 
     .service-box p {
-      color: #000000; /* Dark black color for description text */
+      color: #000000 !important; /* Pure black description */
       font-size: 16px;
-      font-weight: normal; /* Normal description text */
+      font-weight: normal;
     }
 
     /* Hover Effect: Elevation and slight rotation */
@@ -1329,6 +1329,7 @@ body {
 
 </body>
 </html>
+
 
 
 
