@@ -23,31 +23,132 @@
     <a href="/book-appointment" class="cta-button">Book a Consultation</a>
 
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/assets/tfa-logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="TFA - Business Consulting Services to help you grow, scale, and succeed in your market." />
-    <title>The Fine Ace</title>
+    <title>About TFA - The Fine Ace</title>
+    <style>
+      /* General reset and styling */
+      body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        color: #fff;
+        overflow-x: hidden;
+      }
 
-    <!-- External CSS (Replace with your actual CSS path) -->
-    <link rel="stylesheet" href="/assets/styles.css" crossorigin>
+      /* About Section Styling */
+      #about {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #1c1c1c;
+        padding: 50px 20px;
+        position: relative;
+        text-align: center;
+      }
 
-    <!-- External JavaScript (Replace with your actual JS path) -->
-    <script src="/assets/main.js" defer crossorigin></script>
+      #about h2 {
+        font-size: 48px;
+        margin-bottom: 20px;
+        position: relative;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: slideIn 1s ease-in forwards;
+      }
+
+      #about p {
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 700px;
+        margin: 0 auto;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 2s ease-in forwards 1s;
+      }
+
+      #about .image-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        height: 400px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      #about img {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 50%;
+        position: relative;
+        z-index: 10;
+        opacity: 0;
+        animation: scaleIn 1.5s ease-in forwards 0.5s;
+      }
+
+      /* Animations */
+      @keyframes slideIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: translate(-50%, -50%) scale(1);
+        }
+        50% {
+          transform: translate(-50%, -50%) scale(1.1);
+        }
+        100% {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+
+      @keyframes scaleIn {
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
   </head>
-
   <body>
-    <!-- Root element for dynamic content (if using React, Vue, or similar framework) -->
-    <div id="root">
-      <!-- Placeholder content until JavaScript loads -->
-      <h1>Welcome to TFA - The Fine Ace</h1>
-      <p>Our goal is to provide top-notch business consulting services to help you achieve success.</p>
-    </div>
+    <!-- About Section -->
+    <section id="about">
+      <div class="image-container"></div>
+      <img src="/assets/tfa-profile.jpg" alt="TFA Founder Image" />
+
+      <div>
+        <h2>About The Fine Ace</h2>
+        <p>
+          At The Fine Ace (TFA), we pride ourselves on being the go-to consulting firm for 
+          businesses looking to scale, grow, and thrive. Our expertise spans decades, 
+          helping brands develop from the ground up across multiple sectors.
+          With a powerful network of 800+ distributors and a presence across 600+ towns, 
+          we're committed to driving growth and delivering exceptional results for our clients.
+        </p>
+      </div>
+    </section>
   </body>
 </html>
+
 
 
     
