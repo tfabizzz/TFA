@@ -1189,6 +1189,7 @@ body {
 </div>
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1227,8 +1228,8 @@ body {
     }
 
     .service-box {
-      background: rgba(255, 255, 255, 0.2); /* Semi-transparent effect */
-      color: #FFD700; /* Gold text */
+      background: rgba(255, 255, 255, 0.15); /* Semi-transparent effect */
+      color: #2E2E2E; /* Dark gray text for better readability */
       border: 2px solid #FFD700; /* Gold border */
       padding: 25px;
       width: 320px;
@@ -1237,41 +1238,41 @@ body {
       text-align: center;
       position: relative;
       overflow: hidden;
-      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      transition: transform 0.6s ease, box-shadow 0.6s ease;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-      animation: fold-fly-in 1s ease forwards; /* New fold-fly-in animation */
+      animation: scale-in 1s ease forwards; /* New scale-in animation */
     }
 
-    /* Bold Animation: Fold and Fly-In */
-    @keyframes fold-fly-in {
+    /* New Animation: Scale-in and Rotate */
+    @keyframes scale-in {
       0% {
-        transform: rotateX(90deg) translateX(-1000px); /* Start from side with fold */
+        transform: scale(0) rotate(180deg); /* Start with a rotation */
         opacity: 0;
       }
       100% {
-        transform: rotateX(0deg) translateX(0px); /* Unfold and fly into position */
+        transform: scale(1) rotate(0); /* Full-size and straight */
         opacity: 1;
       }
     }
 
-    /* Make the boxes stand out with gold title and bold text */
+    /* Bold Titles and Text */
     .service-box h3 {
       font-family: 'Playfair Display', serif;
-      color: #000000; /* Darker title */
+      color: #FFD700; /* Gold title text */
       font-size: 26px;
       margin-bottom: 12px;
       font-weight: bold; /* Bold titles */
     }
 
     .service-box p {
-      color: #ffffff; /* Bright description text */
+      color: #E0E0E0; /* Light gray for description text */
       font-size: 16px;
       font-weight: bold; /* Bold description text */
     }
 
-    /* Hover Effect: Elevation and rotation */
+    /* Hover Effect: Elevation and slight rotation */
     .service-box:hover {
-      transform: translateY(-10px) rotate(1deg); /* Slight upward movement */
+      transform: translateY(-10px) rotate(3deg); /* Upward movement with slight tilt */
       box-shadow: 0 20px 40px rgba(255, 215, 0, 0.5); /* Gold shadow */
     }
 
@@ -1328,6 +1329,7 @@ body {
 
 </body>
 </html>
+
 
 
 
@@ -1494,185 +1496,155 @@ body {
 
 
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luxurious Testimonial Section</title>
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom Styles for Testimonial Section -->
+  <title>What People Say - TFA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
   <style>
-    /* Section Styling */
-    .testimonial-section {
-      background-color: #f9f6f1; /* Light beige background */
+    /* What People Say Section Styling */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #001f3f; /* Navy blue background */
+    }
+
+    #people-say {
       padding: 60px 0;
       text-align: center;
-      color: #333; /* Dark grey text */
-      font-family: 'Playfair Display', serif; /* Luxurious serif font */
     }
 
-    /* Testimonial Card Styling */
-    .testimonial-card {
-      background-color: #fff; /* White background for the cards */
-      color: #333; /* Dark grey text inside the card */
-      border: 1px solid #d4af37; /* Gold border */
-      border-radius: 10px;
-      padding: 30px;
-      box-shadow: 0 4px 20px rgba(212, 175, 55, 0.15); /* Soft gold shadow */
-      transition: transform 0.3s ease-in-out;
+    #people-say h2 {
+      font-family: 'Playfair Display', serif;
+      color: #FFD700; /* Gold color for the section title */
+      font-size: 42px;
+      margin-bottom: 40px;
     }
 
-    /* Card hover effect */
-    .testimonial-card:hover {
-      transform: scale(1.05); /* Enlarge on hover */
-    }
-
-    /* User Image Styling */
-    .testimonial-img {
-      border-radius: 50%;
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      margin-bottom: 15px;
-      border: 3px solid #d4af37; /* Gold border around image */
-    }
-
-    /* Rating Stars */
-    .stars {
-      color: #d4af37; /* Gold stars */
-      margin-bottom: 10px;
-      font-size: 18px;
-    }
-
-    /* Testimonial Text Styles */
-    .testimonial-text {
-      font-style: italic;
-      font-size: 18px;
-      color: #555; /* Medium grey text */
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
-
-    /* Client Name and Designation */
-    .text-name {
-      font-weight: bold;
-      font-size: 20px;
-      color: #333; /* Dark grey for names */
-    }
-
-    .text-muted {
-      color: #777; /* Light grey for job titles */
+    /* Review Card Styling */
+    .review-box {
+      background-color: #fff; /* White background for the card */
+      border: 2px solid #FFD700; /* Gold border */
+      border-radius: 15px;
+      padding: 20px;
+      width: 300px;
+      text-align: left;
+      color: #001f3f; /* Navy blue text */
       font-size: 16px;
+      margin: 0 auto 40px;
+      position: relative;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      animation: fadeInEffect 1s ease-out;
     }
 
-    /* Responsive adjustments for smaller screens */
+    /* Cool Animation: Fade In and Slide Up */
+    @keyframes fadeInEffect {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+
+    .review-box:hover {
+      box-shadow: 0 20px 40px rgba(0, 31, 63, 0.4); /* Darker shadow on hover */
+      transform: scale(1.05); /* Slight zoom on hover */
+    }
+
+    /* Cool Golden Quotation Marks */
+    .review-box::before {
+      content: "“";
+      font-family: 'Playfair Display', serif;
+      color: #FFD700; /* Gold */
+      font-size: 60px;
+      position: absolute;
+      top: -25px;
+      left: -15px;
+      opacity: 0.2;
+    }
+
+    .review-box h3 {
+      color: #001f3f; /* Dark navy blue */
+      font-size: 20px;
+      margin-top: 0;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .review-box p {
+      color: #444444; /* Gray description */
+    }
+
+    /* Reviewer Name Styling */
+    .reviewer {
+      font-weight: bold;
+      color: #FFD700; /* Gold */
+      margin-top: 20px;
+    }
+
+    /* Review Box Container */
+    .review-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Mobile Responsive */
     @media (max-width: 768px) {
-      .testimonial-img {
-        width: 80px;
-        height: 80px;
+      .review-box {
+        width: 90%;
       }
 
-      .testimonial-text {
-        font-size: 16px;
+      #people-say h2 {
+        font-size: 32px;
       }
-
-      .stars {
-        font-size: 16px;
-      }
-    }
-
-    /* Carousel Controls Styling */
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      background-color: #d4af37; /* Gold background for controls */
-      border-radius: 50%;
-    }
-
-    .carousel-control-prev-icon:hover,
-    .carousel-control-next-icon:hover {
-      background-color: #fff; /* Change to white on hover */
-      color: #d4af37;
     }
   </style>
 </head>
+<body>
 
-<body style="background-color: #f9f6f1; color: #333;"> <!-- Light beige background for the entire page -->
+<!-- What People Say Section -->
+<section id="people-say">
+  <h2>What People Say</h2>
 
-  <!-- Testimonial Section -->
-  <section class="testimonial-section">
-    <div class="container">
-      <h2 class="mb-5" style="color: #d4af37; font-weight: bold;">What People Say</h2> <!-- Luxurious gold title -->
-      
-      <!-- Testimonial Slider -->
-      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <!-- Testimonial 1 -->
-          <div class="carousel-item active">
-            <div class="testimonial-card mx-auto" style="max-width: 600px;">
-              <img src="https://via.placeholder.com/100x100?text=Ravi" class="testimonial-img" alt="Ravi Sharma">
-              <div class="stars">
-                ★★★★☆
-              </div>
-              <p class="testimonial-text">"TFA's team has an outstanding understanding of business strategies. Their insights helped us grow exponentially!"</p>
-              <h5 class="text-name">Ravi Sharma</h5>
-              <p class="text-muted">Founder, Innovate Solutions</p>
-            </div>
-          </div>
-
-          <!-- Testimonial 2 -->
-          <div class="carousel-item">
-            <div class="testimonial-card mx-auto" style="max-width: 600px;">
-              <img src="https://via.placeholder.com/100x100?text=Priya" class="testimonial-img" alt="Priya Verma">
-              <div class="stars">
-                ★★★★★
-              </div>
-              <p class="testimonial-text">"TFA transformed our business approach with their well-crafted marketing strategies. Highly recommend their services!"</p>
-              <h5 class="text-name">Priya Verma</h5>
-              <p class="text-muted">CEO, Verma Industries</p>
-            </div>
-          </div>
-
-          <!-- Testimonial 3 -->
-          <div class="carousel-item">
-            <div class="testimonial-card mx-auto" style="max-width: 600px;">
-              <img src="https://via.placeholder.com/100x100?text=Amit" class="testimonial-img" alt="Amit Patel">
-              <div class="stars">
-                ★★★★☆
-              </div>
-              <p class="testimonial-text">"The expertise at TFA was unmatched. They provided practical solutions that streamlined our business operations."</p>
-              <h5 class="text-name">Amit Patel</h5>
-              <p class="text-muted">Managing Director, Patel & Sons</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Carousel Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+  <div class="review-container">
+    <!-- Single Review Box -->
+    <div class="review-box">
+      <h3>Amazing Services!</h3>
+      <p>Working with TFA has been a transformational experience for our business. Their strategies and insights have helped us grow exponentially.</p>
+      <div class="reviewer">- Rakesh Kumar</div>
     </div>
-  </section>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="review-box">
+      <h3>Professional & Reliable</h3>
+      <p>The team at TFA are incredibly professional. Their tailored solutions were exactly what we needed to take our operations to the next level.</p>
+      <div class="reviewer">- Priya Singh</div>
+    </div>
+
+    <div class="review-box">
+      <h3>Highly Recommend!</h3>
+      <p>TFA provided us with the expertise we needed to streamline our processes and increase our revenue. I can't recommend them enough.</p>
+      <div class="reviewer">- Anil Mehta</div>
+    </div>
+  </div>
+</section>
 
 </body>
-
 </html>
+
+
+
 
 
 
