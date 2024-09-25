@@ -151,188 +151,186 @@
 
 
 
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About TFA - The Fine Ace</title>
-    <style>
-      /* General Styles */
-      body {
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #000;
-        color: #fff;
-        overflow-x: hidden;
-        scroll-behavior: smooth;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About TFA - The Fine Ace</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Main container to center everything */
+    #about {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 200vh;
+    }
+
+    /* Central vertical line */
+    #vertical-line {
+      position: absolute;
+      width: 4px;
+      height: 0; /* Initially 0, will animate */
+      background-color: #fff;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      animation: drawLine 5s ease forwards;
+    }
+
+    /* Line animation from top to bottom */
+    @keyframes drawLine {
+      from {
+        height: 0;
+      }
+      to {
+        height: 100%;
+      }
+    }
+
+    /* Section styling - hidden initially */
+    .section {
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin: 100px 0;
+      transition: all 1s ease-in-out;
+    }
+
+    .section.active {
+      opacity: 1;
+    }
+
+    /* Left and Right content positioning */
+    .content-left, .content-right {
+      position: absolute;
+      width: 45%;
+      max-width: 600px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #333;
+      color: white;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      transform: scale(0.8);
+      transition: transform 1s ease, opacity 1s ease;
+    }
+
+    .content-left {
+      left: -50%;
+      text-align: right;
+    }
+
+    .content-right {
+      right: -50%;
+      text-align: left;
+    }
+
+    /* Move content into view on active */
+    .section.active .content-left {
+      transform: translateX(150%) scale(1);
+    }
+
+    .section.active .content-right {
+      transform: translateX(-150%) scale(1);
+    }
+
+    /* Text styling */
+    h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    /* Responsive styling */
+    @media (max-width: 768px) {
+      .content-left, .content-right {
+        width: 80%;
       }
 
-      /* About Section */
-      #about {
-        position: relative;
-        min-height: 200vh; /* Extra height to make the line scroll */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 50px 20px;
-      }
-
-      /* Vertical Line Animation */
-      #vertical-line {
-        position: absolute;
-        width: 3px;
-        height: 100vh;
-        background-color: #fff;
-        left: 50%;
-        top: 0;
-        animation: drawLine 5s linear forwards;
-        z-index: 1;
-      }
-
-      /* Keyframes for vertical line */
-      @keyframes drawLine {
-        from {
-          height: 0;
-        }
-        to {
-          height: 100%;
-        }
-      }
-
-      /* Section Styling */
-      .section {
-        opacity: 0;
-        transform: translateY(50px);
-        position: relative;
-        margin: 100px 0;
-        z-index: 10;
-        transition: all 1s ease-in-out;
-      }
-
-      /* Section Reveal on Scroll */
-      .section.active {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      /* Content Styling */
       h2 {
-        font-size: 36px;
-        margin-bottom: 20px;
-        color: #fff;
-        position: relative;
+        font-size: 26px;
       }
 
       p {
-        font-size: 18px;
-        line-height: 1.6;
-        max-width: 700px;
-        margin: 0 auto;
+        font-size: 16px;
       }
+    }
+  </style>
+</head>
+<body>
 
-      /* Image container */
-      .section img {
-        max-width: 200px;
-        border-radius: 50%;
-        margin-top: 20px;
-        transition: transform 1s ease-in-out;
-        opacity: 0;
+<section id="about">
+  <!-- Vertical Line -->
+  <div id="vertical-line"></div>
+
+  <!-- Sections -->
+  <div class="section" id="who-we-are">
+    <div class="content-left">
+      <h2>Who We Are</h2>
+      <p>We are a dynamic consulting firm dedicated to helping businesses thrive, scale, and overcome challenges.</p>
+    </div>
+  </div>
+
+  <div class="section" id="what-we-do">
+    <div class="content-right">
+      <h2>What We Do</h2>
+      <p>We offer a range of services, including strategic planning, marketing, and financial advisory, tailored to your needs.</p>
+    </div>
+  </div>
+
+  <div class="section" id="our-goal">
+    <div class="content-left">
+      <h2>Our Goal</h2>
+      <p>Our goal is to empower businesses by providing innovative and effective solutions to reach their highest potential.</p>
+    </div>
+  </div>
+
+  <div class="section" id="our-team">
+    <div class="content-right">
+      <h2>Our Team</h2>
+      <p>Meet our dedicated team of experts who are passionate about driving success for our clients.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Scroll Animation Logic
+  const sections = document.querySelectorAll('.section');
+
+  // Add 'active' class when sections are in view
+  window.addEventListener('scroll', function() {
+    const scrollPosition = window.scrollY + window.innerHeight * 0.7;
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      if (scrollPosition >= sectionTop) {
+        section.classList.add('active');
       }
+    });
+  });
+</script>
 
-      .section.active img {
-        opacity: 1;
-        transform: scale(1.1);
-      }
-
-      /* Vertical line styling */
-      #about::after {
-        content: '';
-        position: absolute;
-        width: 2px;
-        height: 100%;
-        background: linear-gradient(to bottom, transparent 0%, white 50%, transparent 100%);
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      /* Responsive Layout */
-      @media only screen and (max-width: 768px) {
-        h2 {
-          font-size: 28px;
-        }
-
-        p {
-          font-size: 16px;
-        }
-
-        .section img {
-          max-width: 150px;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- Vertical Line -->
-    <div id="vertical-line"></div>
-
-    <!-- About Section -->
-    <section id="about">
-      <div class="section" id="who-we-are">
-        <h2>Who We Are</h2>
-        <p>
-          At The Fine Ace (TFA), we are a team of passionate business consultants dedicated to helping companies grow, scale, and thrive. Our decades of experience span across multiple sectors, ensuring our clients receive top-tier expertise.
-        </p>
-        <img src="/assets/who-we-are.jpg" alt="Who We Are">
-      </div>
-
-      <div class="section" id="what-we-do">
-        <h2>What We Do</h2>
-        <p>
-          From strategic planning to marketing and financial advisory, we provide end-to-end solutions tailored to your business needs. Our goal is to help you reach new heights and achieve measurable success.
-        </p>
-        <img src="/assets/what-we-do.jpg" alt="What We Do">
-      </div>
-
-      <div class="section" id="our-goal">
-        <h2>Our Goal</h2>
-        <p>
-          Our goal is to be the leading consulting firm that helps businesses unlock their full potential, driving sustainable growth and long-term success.
-        </p>
-        <img src="/assets/our-goal.jpg" alt="Our Goal">
-      </div>
-
-      <div class="section" id="our-team">
-        <h2>Our Team</h2>
-        <p>
-          Meet the creative minds and experienced professionals behind TFA. Our team is composed of industry veterans with a strong passion for innovation and excellence.
-        </p>
-        <img src="/assets/our-team.jpg" alt="Our Team">
-      </div>
-    </section>
-
-    <script>
-      // Scroll Animation Logic
-      const sections = document.querySelectorAll('.section');
-
-      // Add 'active' class to sections as the user scrolls past them
-      window.addEventListener('scroll', function() {
-        const scrollPosition = window.scrollY + window.innerHeight;
-
-        sections.forEach(section => {
-          const sectionTop = section.offsetTop + section.offsetHeight / 2;
-          if (scrollPosition >= sectionTop) {
-            section.classList.add('active');
-          }
-        });
-      });
-    </script>
-  </body>
+</body>
 </html>
+
 
 
     
