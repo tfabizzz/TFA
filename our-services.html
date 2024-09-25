@@ -24,6 +24,7 @@
     .navbar h1 {
       margin: 0;
       font-size: 24px;
+      color: gold; /* Gold color for branding */
     }
 
     .navbar ul {
@@ -51,11 +52,12 @@
     #services {
       background-color: white;
       padding: 30px 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     #services h2 {
       text-align: center;
-      color: black;
+      color: navy; /* Navy color for headings */
       font-size: 42px;
       font-weight: bold;
       margin-bottom: 20px;
@@ -78,28 +80,55 @@
     }
 
     .service-box {
-      background-color: #1a1a1a;
+      background-color: #1a1a1a; /* Dark background for boxes */
       padding: 15px;
       border-radius: 10px;
       text-align: center;
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer; /* Change cursor to pointer */
+      position: relative; /* For the hover effect */
+      overflow: hidden; /* To hide the overflow during animation */
     }
 
     .service-box h3 {
-      color: white;
+      color: gold; /* Gold color for titles */
       font-size: 24px;
       margin-bottom: 10px;
     }
 
     .service-box p {
-      color: gray; /* Set paragraph text color to gray */
+      color: beige; /* Beige color for paragraph text */
       font-size: 14px;
     }
 
     /* Hover Effect */
     .service-box:hover {
       transform: scale(1.05);
-      box-shadow: 0 8px 15px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 15px rgba(255, 215, 0, 0.5); /* Gold shadow on hover */
+    }
+
+    /* Animation */
+    .service-box::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300%;
+      height: 300%;
+      background: rgba(255, 215, 0, 0.2); /* Light gold overlay */
+      border-radius: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.6s ease-out;
+      z-index: 0; /* Send behind the content */
+    }
+
+    .service-box:hover::after {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .service-box > * {
+      position: relative; /* For the content above the overlay */
+      z-index: 1; /* Bring content above the overlay */
     }
 
     /* Responsive Grid */
@@ -177,7 +206,7 @@
 
 <!-- Navbar -->
 <div class="navbar">
-    <a href="https://thefineace.com/" style="color: white; font-size: 24px; font-weight: bold; text-decoration: none;">TFA</a>
+    <a href="https://thefineace.com/" style="color: gold; font-size: 24px; font-weight: bold; text-decoration: none;">TFA</a>
     <ul class="nav-links">
       <li><a href="https://thefineace.com/">Home</a></li>
       <li><a href="#services">Services</a></li>
@@ -192,85 +221,82 @@
 
   <div class="service-container">
     <!-- Single Service Box -->
-    <div class="service-box">
+    <div class="service-box" onclick="location.href='strategy-consulting.html'">
       <h3>Strategy Consulting</h3>
-      <p style="color: gray;">From corporate strategy to M&A, we help you define long-term goals and guide you through the acquisition process.</p>
+      <p>From corporate strategy to M&A, we help you define long-term goals and guide you through the acquisition process.</p>
     </div>
 
-    <div class="service-box">
+    <div class="service-box" onclick="location.href='operations-consulting.html'">
       <h3>Operations Consulting</h3>
-      <p style="color: gray;">Optimize your operations, improve efficiency, and streamline your supply chain with lean and Six Sigma methodologies.</p>
+      <p>Optimize your operations, improve efficiency, and streamline your supply chain with lean and Six Sigma methodologies.</p>
     </div>
 
-    <div class="service-box">
+    <div class="service-box" onclick="location.href='financial-advisory.html'">
       <h3>Financial Advisory</h3>
-      <p style="color: gray;">Expert financial strategy, cost optimization, and capital structure solutions to ensure your company’s financial stability.</p>
+      <p>Expert financial strategy, cost optimization, and capital structure solutions to ensure your company’s financial stability.</p>
     </div>
 
-    <div class="service-box">
+    <div class="service-box" onclick="location.href='hr-organizational-consulting.html'">
       <h3>HR & Organizational Consulting</h3>
-      <p style="color: gray;">We help design your organization for optimal performance, manage talent acquisition, and implement change management strategies.</p>
+      <p>We help design your organization for optimal performance, manage talent acquisition, and implement change management strategies.</p>
     </div>
 
-    <div class="service-box">
+    <div class="service-box" onclick="location.href='digital-transformation.html'">
       <h3>Digital Transformation</h3>
-      <p style="color: gray;">We guide you through digital transformation, helping you leverage technology, data, and IT optimization to stay competitive.</p>
+      <p>We guide you through digital transformation, helping you leverage technology, data, and IT optimization to stay competitive.</p>
     </div>
 
-    <div class="service-box">
+    <div class="service-box" onclick="location.href='marketing-sales-consulting.html'">
       <h3>Marketing and Sales Consulting</h3>
-      <p style="color: gray;">Develop high-performing sales strategies, branding, and CRM systems to boost your customer engagement and revenue.</p>
+      <p>Develop high-performing sales strategies, branding, and CRM systems to boost your customer engagement and revenue.</p>
     </div>
 
-    <div class="service-box">
+    <div class="service-box" onclick="location.href='risk-management-compliance.html'">
       <h3>Risk Management & Compliance</h3>
-      <p style="color: gray;">We help identify, assess, and mitigate risks while ensuring regulatory compliance across your business operations.</p>
+      <p>We help identify, assess, and mitigate risks while ensuring regulatory compliance across your business operations.</p>
     </div>
 
-    <div class="service-box">
+    <div class="service-box" onclick="location.href='sustainability-esg-consulting.html'">
       <h3>Sustainability & ESG Consulting</h3>
-      <p style="color: gray;">Our sustainability experts develop strategies for minimizing environmental impact and meeting ESG goals.</p>
+      <p>Our sustainability experts develop strategies for minimizing environmental impact and meeting ESG goals.</p>
     </div>
 
-    <div class="service-box">
+    <div class="service-box" onclick="location.href='innovation-product-development.html'">
       <h3>Innovation & Product Development</h3>
-      <p style="color: gray;">We support your R&D efforts, bringing innovations to market faster and helping launch new products successfully.</p>
+      <p>We support your R&D efforts, bringing innovations to market faster and helping launch new products successfully.</p>
     </div>
 
-    <div class="service-box">
+    <div class="service-box" onclick="location.href='ma-post-merger-integration.html'">
       <h3>M&A and Post-Merger Integration</h3>
-      <p style="color: gray;">We assist in M&A due diligence and ensure smooth integration of processes and cultures post-merger.</p>
+      <p>We assist in M&A due diligence and ensure smooth integration of processes and cultures post-merger.</p>
     </div>
 
-    <div class="service-box">
-      <h3>Globalization & Market Entry</h3>
-      <p style="color: gray;">Expand your business internationally with our expert guidance on market entry, regulation, and consumer insights.</p>
+    <div class="service-box" onclick="location.href='financial-modeling-analysis.html'">
+      <h3>Financial Modeling & Analysis</h3>
+      <p>Create robust financial models to guide your decision-making, investment analysis, and forecasting.</p>
     </div>
 
-    <div class="service-box">
-      <h3>Private Equity Consulting</h3>
-      <p style="color: gray;">Our private equity experts help manage portfolio companies to maximize value and assess investment strategies.</p>
+    <div class="service-box" onclick="location.href='data-analytics-insights.html'">
+      <h3>Data Analytics & Insights</h3>
+      <p>Utilize data analytics to drive strategic decisions, operational improvements, and customer insights.</p>
     </div>
   </div>
 </section>
 
-<!-- Footer Section -->
+<!-- Footer -->
 <footer>
   <div class="social-links">
-    <a href="https://instagram.com/thefineace" target="_blank">Instagram</a>
-    <a href="https://www.linkedin.com/company/thefineace" target="_blank">LinkedIn</a>
-    <a href="https://www.youtube.com/channel/UCXXXXXX" target="_blank">YouTube</a>
+    <a href="#">Facebook</a>
+    <a href="#">Twitter</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">Instagram</a>
   </div>
-
   <div class="footer-nav">
-    <a href="https://thefineace.com/">Home</a>
-    <a href="mailto:info@thefineace.com">Email Us</a>
-    <a href="https://thefineace.com/contact%20us.html">Contact Us</a>
+    <a href="#">Privacy Policy</a> | 
+    <a href="#">Terms of Service</a>
   </div>
-
   <div class="contact-info">
-    <p>&copy; 2024 The Fine Ace. All rights reserved.</p>
-    <p>Email: <a href="mailto:info@thefineace.com">info@thefineace.com</a></p>
+    <p>Contact us: <a href="mailto:info@thefineace.com">info@thefineace.com</a></p>
   </div>
 </footer>
 
