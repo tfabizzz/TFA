@@ -993,7 +993,7 @@ body {
 
 
 
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -1004,8 +1004,8 @@ body {
     /* Luxurious Style for Calendly Widget */
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #121212; /* Dark background for a premium feel */
-      color: #f4e8c1; /* Gold text for luxury */
+      background-color: #f0f0f0; /* Lighter background to match */
+      color: #333; /* Contrasting text */
       margin: 0;
       padding: 0;
     }
@@ -1014,120 +1014,83 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 20px;
-      width: 100%;
-      background-color: black;
+      height: 50vh;
+      background: linear-gradient(135deg, #e8e5dd, #d8d1c9); /* Light gradient */
     }
 
     .booking-box {
-      border: 2px solid #f4e8c1; /* Gold border */
-      padding: 25px 30px;
-      border-radius: 12px;
-      width: 100%;
-      max-width: 800px;
+      background: rgba(255, 255, 255, 0.9); /* Glassmorphism effect */
+      border: 2px solid #444; /* Strong, bold border */
+      border-radius: 15px;
+      padding: 40px;
       text-align: center;
-      background-color: rgba(255, 255, 255, 0.1); /* Elegant glass effect */
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Luxurious shadow */
+      max-width: 400px;
+      position: relative;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); /* Strong shadow */
+      backdrop-filter: blur(5px); /* Glass-like effect */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .booking-box:hover {
+      transform: scale(1.1); /* Scale on hover */
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3); /* Bolder shadow */
     }
 
     .booking-box h2 {
       font-family: 'Playfair Display', serif;
-      color: #f4e8c1; /* Gold text */
-      font-size: 28px;
+      color: #b88a00; /* Bold gold text */
+      font-size: 2.2rem;
       margin-bottom: 15px;
+      text-transform: uppercase;
     }
 
     .booking-box a {
       font-weight: bold;
-      font-size: 18px;
+      font-size: 1.1rem;
       text-decoration: none;
       color: #fff;
-      background-color: #d4af37; /* Rich gold button */
-      padding: 14px 30px;
+      background-color: #b88a00; /* Gold button */
+      padding: 12px 30px;
       border-radius: 6px;
-      transition: background-color 0.3s ease, transform 0.3s ease;
       display: inline-block;
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
     .booking-box a:hover {
-      background-color: #b8860b; /* Darker gold on hover */
+      background-color: #555; /* Darker hover */
       transform: scale(1.05);
     }
 
-    /* Luxurious Overlay Section */
-    .container {
-      max-width: 1200px;
-      margin: 50px auto;
+    .arrow {
+      font-size: 2.7rem;
+      color: #b88a00;
+      margin-top: 20px;
+      animation: bounce 1.5s infinite;
     }
 
-    .row {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .overlay {
-      position: relative;
-      width: 100%;
-      height: 300px;
-      background-image: url('your-luxurious-background-image.jpg'); /* Luxurious background */
-      background-size: cover;
-      background-position: center;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .overlay::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.4); /* Dark overlay */
-    }
-
-    .text {
-      position: absolute;
-      color: #f4e8c1; /* Gold text */
-      font-size: 32px;
-      font-family: 'Playfair Display', serif;
-      text-align: center;
-      width: 100%;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 2;
-    }
-
-    /* Data Box Styling */
-    .data2 {
-      background-color: rgba(255, 255, 255, 0.1);
-      border: 2px solid #f4e8c1; /* Gold border */
-      padding: 20px;
-      border-radius: 10px;
-      color: #f4e8c1;
-      text-align: center;
-      font-size: 24px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    /* Bounce animation */
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-12px);
+      }
     }
 
     /* Mobile optimization */
     @media (max-width: 768px) {
+      .booking-box {
+        width: 90%;
+        padding: 25px;
+      }
+
       .booking-box h2 {
-        font-size: 22px;
+        font-size: 1.8rem;
       }
 
-      .booking-box a {
-        font-size: 16px;
-        padding: 10px 20px;
-      }
-
-      .overlay {
-        height: 200px;
-      }
-
-      .text {
-        font-size: 24px;
+      .arrow {
+        font-size: 2.2rem;
       }
     }
   </style>
@@ -1139,15 +1102,14 @@ body {
   <div class="booking-box">
     <h2>Book an Appointment</h2>
     <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/thefineace'});return false;">Schedule Now</a>
+    <div class="arrow">↓</div>
   </div>
 </div>
-
-<!-- Luxurious Overlay Section -->
-
 
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </body>
 </html>
+
 
     
    
