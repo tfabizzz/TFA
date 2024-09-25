@@ -1230,81 +1230,120 @@ body {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Services - TFA</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Link to your stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
   <style>
-    /* Styles for the service box */
+    /* Luxurious Styles */
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      background-color: #121212;
+      color: #fff;
     }
 
     .service-section {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 50vh;
-      background-color: #fff;
+      height: 100vh;
+      background: linear-gradient(135deg, #000000, #333333); /* Luxurious dark gradient */
     }
 
     .service-box {
-      background-color: #fff;
-      border: 2px solid black;
-      padding: 20px;
+      background: rgba(255, 255, 255, 0.1); /* Transparent glass effect */
+      border: 2px solid rgba(255, 255, 255, 0.3); /* Soft glowing border */
+      border-radius: 15px;
+      padding: 30px;
       text-align: center;
-      max-width: 250px;
+      max-width: 300px;
       position: relative;
-      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 8px 30px rgba(255, 255, 255, 0.1); /* Elegant shadow */
+      backdrop-filter: blur(10px); /* Glassmorphism effect */
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .service-box:hover {
+      transform: scale(1.05); /* Smooth scaling on hover */
+      box-shadow: 0 10px 40px rgba(255, 255, 255, 0.2); /* Enhanced shadow on hover */
     }
 
     .service-box h1 {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: black; /* Text in black */
-      margin: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #f4e8c1; /* Luxurious gold text */
+      margin-bottom: 20px;
+      text-transform: uppercase;
     }
 
     .arrow {
-      font-size: 2rem;
-      color: black; /* Arrow in black */
-      margin-top: 10px;
+      font-size: 2.5rem;
+      color: #f4e8c1; /* Gold arrow */
+      margin: 20px 0;
+      animation: bounce 2s infinite; /* Bouncing arrow */
     }
 
     .explore {
-      font-size: 0.8rem;
-      margin-top: 8px;
-      color: black; /* Explore text in black */
+      font-size: 1rem;
       text-transform: uppercase;
       letter-spacing: 1px;
+      color: #f4e8c1;
     }
 
     .explore a {
       text-decoration: none;
-      color: black; /* Link text in black */
+      color: #f4e8c1;
+      position: relative;
     }
 
     .explore a:hover {
-      color: darkgray;
-      transition: color 0.3s ease;
+      color: #fff;
+    }
+
+    .explore a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      display: block;
+      margin-top: 5px;
+      right: 0;
+      background: #f4e8c1;
+      transition: width 0.4s ease;
+    }
+
+    .explore a:hover::after {
+      width: 100%; /* Underline animation */
+      left: 0;
+      background: #fff;
+    }
+
+    /* Bouncing arrow animation */
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
     }
 
     @media (max-width: 768px) {
       .service-box {
-        width: 80%;
-        padding: 15px;
+        width: 90%;
+        padding: 20px;
       }
 
       .service-box h1 {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
       }
 
       .arrow {
-        font-size: 1.8rem;
+        font-size: 2rem;
       }
 
       .explore {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
       }
     }
   </style>
@@ -1321,6 +1360,7 @@ body {
 
 </body>
 </html>
+
 
 
 
