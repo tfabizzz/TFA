@@ -1201,12 +1201,12 @@ body {
   <title>Our Services - TFA</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Luxurious, Bold, and Cool Our Services Section */
+    /* Bold, Eye-catching Our Services Section */
     body {
       margin: 0;
       padding: 0;
       font-family: 'Roboto', sans-serif;
-      background-color: #121212; /* Dark background for boldness */
+      background-color: #121212; /* Dark background */
       color: #fff;
     }
 
@@ -1222,8 +1222,8 @@ body {
       font-weight: bold;
       margin-bottom: 30px;
       opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s forwards; /* Smooth fade-in animation */
+      transform: translateX(-50px);
+      animation: slideIn 1s forwards; /* Slide-in animation */
     }
 
     #services p {
@@ -1231,8 +1231,8 @@ body {
       font-size: 20px;
       margin-bottom: 50px;
       opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1.2s forwards;
+      transform: translateX(50px);
+      animation: slideIn 1.2s forwards;
     }
 
     /* Service Box Styling */
@@ -1249,8 +1249,8 @@ body {
       position: relative;
       box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1); /* Shadow for depth */
       opacity: 0;
-      transform: translateY(40px);
-      animation: fadeInUp 1.5s forwards;
+      transform: scale(0.8); /* Start smaller */
+      animation: zoomIn 1.5s forwards ease-out;
     }
 
     .service-box h3 {
@@ -1268,7 +1268,7 @@ body {
 
     /* Cool Hover Effects */
     .service-box:hover {
-      transform: scale(1.1); /* Enlarges box on hover */
+      transform: scale(1.1) rotate(2deg); /* Enlarges and slightly rotates on hover */
       box-shadow: 0 20px 40px rgba(255, 255, 255, 0.3); /* Bolder shadow on hover */
       border-color: #f4e8c1; /* Gold border on hover */
       background-color: rgba(255, 255, 255, 0.15); /* Darker background on hover */
@@ -1314,14 +1314,25 @@ body {
     }
 
     /* Animation Keyframes */
-    @keyframes fadeInUp {
+    @keyframes slideIn {
       0% {
         opacity: 0;
-        transform: translateY(40px);
+        transform: translateX(-50px);
       }
       100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes zoomIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
       }
     }
   </style>
@@ -1356,6 +1367,7 @@ body {
 
 </body>
 </html>
+
 
 
 
