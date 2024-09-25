@@ -1193,7 +1193,7 @@ body {
 
 
 
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -1201,7 +1201,7 @@ body {
   <title>Our Services - TFA</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Luxurious and Bold Our Services Section */
+    /* Luxurious, Bold, and Cool Our Services Section */
     body {
       margin: 0;
       padding: 0;
@@ -1221,26 +1221,36 @@ body {
       font-size: 48px;
       font-weight: bold;
       margin-bottom: 30px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards; /* Smooth fade-in animation */
     }
 
     #services p {
       color: #dcdcdc;
       font-size: 20px;
       margin-bottom: 50px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1.2s forwards;
     }
 
+    /* Service Box Styling */
     .service-box {
       background: rgba(255, 255, 255, 0.08); /* Subtle glass effect */
-      border: 2px solid rgba(255, 255, 255, 0.4); /* Bolder glowing effect */
+      border: 2px solid rgba(255, 255, 255, 0.3); /* Glowing border */
       padding: 30px;
       width: 340px;
       border-radius: 15px;
       text-decoration: none;
       text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-      backdrop-filter: blur(8px);
+      transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.3s ease, background-color 0.3s ease;
+      backdrop-filter: blur(10px);
       position: relative;
-      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1); /* Bold shadow for stronger look */
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1); /* Shadow for depth */
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 1.5s forwards;
     }
 
     .service-box h3 {
@@ -1252,14 +1262,16 @@ body {
     }
 
     .service-box p {
-      color: #bbb;
+      color: #fff; /* Increased contrast for clarity */
       font-size: 17px;
     }
 
+    /* Cool Hover Effects */
     .service-box:hover {
-      transform: scale(1.1); /* Strong scaling effect for courage */
+      transform: scale(1.1); /* Enlarges box on hover */
       box-shadow: 0 20px 40px rgba(255, 255, 255, 0.3); /* Bolder shadow on hover */
       border-color: #f4e8c1; /* Gold border on hover */
+      background-color: rgba(255, 255, 255, 0.15); /* Darker background on hover */
     }
 
     .service-box::before {
@@ -1272,7 +1284,7 @@ body {
       border-radius: 15px;
       background: rgba(255, 215, 0, 0.15); /* Subtle gold overlay */
       opacity: 0;
-      transition: opacity 0.3s ease;
+      transition: opacity 0.4s ease;
     }
 
     .service-box:hover::before {
@@ -1298,6 +1310,18 @@ body {
 
       #services h2 {
         font-size: 36px;
+      }
+    }
+
+    /* Animation Keyframes */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
   </style>
@@ -1332,6 +1356,7 @@ body {
 
 </body>
 </html>
+
 
 
 
