@@ -511,7 +511,7 @@ body {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Navbar</title>
+    <title>Updated Navbar</title>
     <style>
         * {
             margin: 0;
@@ -529,19 +529,20 @@ body {
             justify-content: space-between;
             align-items: center;
             padding: 15px 50px;
-            background-color: #333;
-            color: #fff;
+            background-color: #fff; /* Changed to white */
+            color: #333;
             position: sticky;
             top: 0;
             width: 100%;
             z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         nav .logo {
             font-size: 24px;
             font-weight: bold;
             text-transform: uppercase;
-            color: #fff;
+            color: #333;
             display: flex;
             align-items: center;
         }
@@ -570,7 +571,7 @@ body {
 
         nav ul li a {
             text-decoration: none;
-            color: #fff;
+            color: #333; /* Text color set to dark for contrast */
             font-size: 18px;
             position: relative;
         }
@@ -600,7 +601,7 @@ body {
             display: none;
             cursor: pointer;
             font-size: 30px;
-            color: #fff;
+            color: #333;
         }
 
         @media (max-width: 768px) {
@@ -615,7 +616,7 @@ body {
                 position: absolute;
                 top: 70px;
                 left: 0;
-                background-color: #333;
+                background-color: #fff;
             }
 
             nav ul.show {
@@ -640,7 +641,7 @@ body {
     <nav>
         <!-- Logo with animation -->
         <div class="logo">
-            <img src="TFA.png" alt="Logo">
+            <img src="https://via.placeholder.com/50" alt="Logo">
             TFA
         </div>
 
@@ -649,11 +650,11 @@ body {
 
         <!-- Navbar links -->
         <ul id="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="https://thefineace.com">Home</a></li> <!-- Linked to thefineace.com -->
+            <li><a href="services.html">Services</a></li> <!-- Linked to a services page -->
+            <li><a href="about.html">About</a></li> <!-- Linked to an about page -->
+            <li><a href="contact.html">Contact Us</a></li> <!-- Linked to a contact page -->
+            <li><a href="https://thefineace.blogspot.com/">Blog</a></li> <!-- Linked to the blog -->
         </ul>
     </nav>
 
@@ -674,19 +675,6 @@ body {
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
