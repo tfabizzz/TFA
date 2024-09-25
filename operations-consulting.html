@@ -153,6 +153,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -162,22 +163,96 @@
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f0f0f0;
-      color: #333;
-      overflow-x: hidden;
-      position: relative;
+      overflow: hidden; /* Hide scrollbars for a cleaner look */
     }
 
-    /* Main container for the about section */
+    /* Dreamy Galaxy Background Animation */
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center,
+        #262626 0%,
+        #1e1e1e 30%,
+        #171717 60%,
+        #101010 80%,
+        #0b0b0b 100%);
+      animation: backgroundMove 20s ease-in-out infinite;
+    }
+
+    @keyframes backgroundMove {
+      from {
+        background-position: 0 0;
+      }
+      to {
+        background-position: 400px 400px;
+      }
+    }
+
+    /* Glittering Stars Animation */
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      opacity: 0.2;
+    }
+
+    .stars span {
+      display: block;
+      width: 3px;
+      height: 3px;
+      position: absolute;
+      animation: twinkle 1s infinite alternate;
+      background: #fff;
+      border-radius: 50%;
+    }
+
+    @keyframes twinkle {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .stars span:nth-child(odd) {
+      animation-delay: 0.2s;
+    }
+
+    .stars span:nth-child(even) {
+      animation-delay: 0.4s;
+    }
+
+    /* About Section */
     #about {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 50px 0;
-      position: relative;
-      overflow: hidden;
-      background-color: #faf3e0; /* Aesthetic light beige background */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 50px;
+      width: 80%;
+      max-width: 1200px;
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      animation: enterSection 1s ease-in-out forwards;
+    }
+
+    @keyframes enterSection {
+      from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
     }
 
     /* Section container */
@@ -186,164 +261,29 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      width: 100%;
-      max-width: 1200px;
-      text-align: center;
-      margin: 60px 0;
-      transition: all 1.2s ease;
-    }
-
-    .section.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Cool aesthetic text boxes */
-    .content-box {
-      position: relative;
-      width: 80%;
-      max-width: 600px;
-      padding: 30px;
-      border-radius: 15px;
-      background-color: #fff;
-      color: #333;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      transition: transform 1s ease, opacity 1s ease;
       margin-bottom: 40px;
     }
 
-    /* Hover effect with slight scale and glow */
-    .content-box:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 25px rgba(255, 223, 186, 0.6); /* Soft glowing shadow */
-    }
-
-    /* Left and right colors for variety */
-    .content-left {
-      background-color: #ffe4e1; /* Soft pastel pink */
-    }
-
-    .content-right {
-      background-color: #c1e1dc; /* Soft mint green */
-    }
-
-    /* Text styling */
-    h2 {
+    .section h2 {
       font-size: 32px;
       margin-bottom: 10px;
       color: #333;
     }
 
-    p {
+    .section p {
       font-size: 18px;
       line-height: 1.6;
       color: #555;
     }
 
-    /* Glittering effect on background */
-    .glitter {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      background: url('https://www.transparenttextures.com/patterns/glitter.png'); /* Glitter texture */
-      opacity: 0.15;
-      animation: glitterMove 10s infinite linear;
-    }
-
-    /* Glitter animation */
-    @keyframes glitterMove {
-      0% { background-position: 0 0; }
-      100% { background-position: 500px 500px; }
-    }
-
     /* Responsive adjustments */
-    @media (max-width: 1200px) {
-      .content-box {
-        width: 90%;
-      }
-    }
-
     @media (max-width: 768px) {
-      h2 {
+      .section h2 {
         font-size: 26px;
       }
 
-      p {
+      .section p {
         font-size: 16px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-<!-- Glitter effect -->
-<div class="glitter"></div>
-
-<!-- About Section -->
-<section id="about">
-
-  <!-- Section: Who We Are -->
-  <div class="section">
-    <div class="content-box content-left">
-      <h2>Who We Are</h2>
-      <p>We are a dynamic consulting firm that helps businesses thrive, scale, and overcome challenges with innovative solutions.</p>
-    </div>
-  </div>
-
-  <!-- Section: What We Do -->
-  <div class="section">
-    <div class="content-box content-right">
-      <h2>What We Do</h2>
-      <p>We offer a wide range of services, including strategic planning, marketing campaigns, and financial advisory, tailored for business success.</p>
-    </div>
-  </div>
-
-  <!-- Section: Our Goal -->
-  <div class="section">
-    <div class="content-box content-left">
-      <h2>Our Goal</h2>
-      <p>Our goal is to empower businesses by providing innovative and effective solutions, helping them reach their highest potential.</p>
-    </div>
-  </div>
-
-  <!-- Section: Our Team -->
-  <div class="section">
-    <div class="content-box content-right">
-      <h2>Our Team</h2>
-      <p>Our team consists of industry experts who are passionate about helping your business succeed and grow sustainably.</p>
-    </div>
-  </div>
-  
-</section>
-
-<!-- JavaScript to trigger animations -->
-<script>
-  // Scroll animation for section activation
-  const sections = document.querySelectorAll('.section');
-
-  window.addEventListener('scroll', function() {
-    const scrollPosition = window.scrollY + window.innerHeight * 0.7;
-
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      if (scrollPosition >= sectionTop) {
-        section.classList.add('active');
-      }
-    });
-  });
-</script>
-
-</body>
-</html>
-
-
-
-
-
-
   
 
 </script>
