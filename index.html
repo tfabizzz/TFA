@@ -1206,32 +1206,34 @@ body {
       margin: 0;
       padding: 0;
       font-family: 'Roboto', sans-serif;
-      background-color: #f4f4f9; /* Light background */
+      background-color: #121212;
     }
 
     #services {
-      background-color: #fff; /* White background for a clean and bold look */
+      background-color: #ffffff; /* Light background for contrast */
       padding: 60px 0;
     }
 
     #services h2 {
       font-family: 'Playfair Display', serif;
-      color: #333; /* Dark, bold title */
+      color: #333333; /* Dark text for contrast */
       font-size: 42px;
       font-weight: bold;
       margin-bottom: 20px;
+      text-align: center;
     }
 
     #services p {
-      color: #555;
+      color: #555555; /* Dark gray text */
       font-size: 18px;
       margin-bottom: 40px;
+      text-align: center;
     }
 
-    /* Service Box Styles */
     .service-box {
-      background-color: #fff; /* Clean white background */
-      border: 2px solid #ddd;
+      background: rgba(0, 0, 0, 0.6); /* Darker background for boxes */
+      color: #ffffff; /* White text for visibility */
+      border: 2px solid #f4e8c1; /* Luxurious gold border */
       padding: 25px;
       width: 320px;
       border-radius: 12px;
@@ -1239,29 +1241,30 @@ body {
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       position: relative;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+      overflow: hidden; /* Hide overflowing elements */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow */
     }
 
     .service-box h3 {
       font-family: 'Playfair Display', serif;
-      color: #333; /* Bold dark title */
+      color: #f4e8c1; /* Gold text */
       font-size: 24px;
       margin-bottom: 12px;
+      font-weight: bold; /* Bold text */
     }
 
     .service-box p {
-      color: #555; /* Easily visible dark text */
+      color: #cccccc; /* Light gray text */
       font-size: 16px;
+      font-weight: bold; /* Bold text for emphasis */
     }
 
-    /* Box Animation */
     .service-box:hover {
-      transform: translateY(-10px) scale(1.02); /* Lift and scale on hover */
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-      border-color: #333; /* Bold border on hover */
+      transform: scale(1.1) rotate(2deg); /* Slight scale and rotation on hover */
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
     }
 
-    /* Container for Boxes */
+    /* Service Box Container */
     .service-container {
       display: flex;
       flex-wrap: wrap;
@@ -1272,44 +1275,18 @@ body {
       padding: 0 20px;
     }
 
-    /* Rotating animation on hover */
-    .service-box:hover::after {
-      content: '';
-      position: absolute;
-      top: -5px;
-      left: -5px;
-      width: 100%;
-      height: 100%;
-      border: 2px solid #f4e8c1;
-      border-radius: 12px;
-      animation: rotate-border 1s infinite;
+    /* Animation for Service Boxes */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
     }
 
-    @keyframes rotate-border {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    /* Other Professional Animations */
     .service-box {
-      position: relative;
-      transition: transform 0.3s, box-shadow 0.3s ease-in-out;
+      animation: pulse 2s infinite; /* Pulsing animation */
     }
 
-    .service-box:hover {
-      transform: translateY(-15px); /* Lift the box */
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-    }
-
-    .service-box:hover h3 {
-      color: #f4e8c1; /* Gold heading on hover */
-    }
-
-    /* Service Box Content Visibility on Mobile */
+    /* Mobile Responsive */
     @media (max-width: 768px) {
       .service-box {
         width: 90%;
@@ -1325,7 +1302,7 @@ body {
 
 <!-- Our Services Section -->
 <section id="services">
-  <div style="text-align: center;">
+  <div>
     <h2>Our Services</h2>
     <p>Explore our wide range of management consulting services designed to help your business thrive.</p>
   </div>
@@ -1334,24 +1311,23 @@ body {
     <!-- Single Service Box -->
     <a href="strategy-consulting.html" class="service-box">
       <h3>Strategy Consulting</h3>
-      <p>Helping you define long-term goals, improve competitiveness, and navigate mergers and acquisitions.</p>
+      <p>Helping you define long-term goals and navigate the complexities of business growth.</p>
     </a>
 
     <a href="operations-consulting.html" class="service-box">
       <h3>Operations Consulting</h3>
-      <p>Streamline processes, reduce costs, and enhance productivity through operational efficiency.</p>
+      <p>Streamline processes to enhance productivity and reduce costs effectively.</p>
     </a>
 
     <a href="financial-advisory.html" class="service-box">
       <h3>Financial Advisory</h3>
-      <p>We provide expert financial strategies to optimize costs, capital structure, and improve your financial health.</p>
+      <p>Expert strategies to optimize financial health and improve capital structure.</p>
     </a>
   </div>
 </section>
 
 </body>
 </html>
-
 
 
 
