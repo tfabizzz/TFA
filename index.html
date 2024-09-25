@@ -1086,124 +1086,143 @@ body {
 </div>
 </div>
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - TFA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
   <style>
-    /* Our Services Section */
-    .our-services .description {
-      color: #000 !important; /* Force black text */
+    /* Luxurious Our Services Section */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #121212;
+    }
+
+    #services {
+      background-color: black;
+      padding: 60px 0;
+    }
+
+    #services h2 {
+      font-family: 'Playfair Display', serif;
+      color: #f4e8c1; /* Luxurious gold */
+      font-size: 42px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    #services p {
+      color: #dcdcdc;
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .service-box {
+      background: rgba(255, 255, 255, 0.1); /* Elegant glass effect */
+      border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle gold glow */
+      padding: 25px;
+      width: 320px;
+      border-radius: 12px;
+      text-decoration: none;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(10px);
+      position: relative;
+    }
+
+    .service-box h3 {
+      font-family: 'Playfair Display', serif;
+      color: #f4e8c1; /* Gold text */
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .service-box p {
+      color: #ccc;
+      font-size: 16px;
+    }
+
+    .service-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 25px rgba(255, 255, 255, 0.2);
+      border-color: #f4e8c1; /* Gold border on hover */
+    }
+
+    .service-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 12px;
+      background: rgba(255, 215, 0, 0.1); /* Subtle gold overlay */
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .service-box:hover::before {
+      opacity: 1; /* Show overlay on hover */
+    }
+
+    /* Service Box Container */
+    .service-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .service-box {
+        width: 90%;
+      }
+
+      #services h2 {
+        font-size: 32px;
+      }
     }
   </style>
 </head>
-
 <body>
-  <!-- Our Services Section -->
- 
-</body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- Our Services Section -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Our Services Section -->
-<section id="services" style="background-color: black; padding: 50px 0;">
-  <div style="text-align: center; color: white; margin-bottom: 40px;">
-    <h2 style="font-size: 36px; font-weight: bold;">Our Services</h2>
-    <p style="font-size: 18px;">Explore our wide range of management consulting services designed to help your business thrive.</p>
+<section id="services">
+  <div style="text-align: center;">
+    <h2>Our Services</h2>
+    <p>Explore our wide range of management consulting services designed to help your business thrive.</p>
   </div>
 
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+  <div class="service-container">
     <!-- Single Service Box -->
-    <a href="strategy-consulting.html" class="service-box" style="background-color: white; padding: 20px; width: 300px; border-radius: 10px; transition: transform 0.3s; text-decoration: none; text-align: center;">
-      <h3 style="color: black; font-size: 22px; margin-bottom: 10px;">Strategy Consulting</h3>
-      <p style="color: #333;">Helping you define long-term goals, improve competitiveness, and navigate mergers and acquisitions.</p>
+    <a href="strategy-consulting.html" class="service-box">
+      <h3>Strategy Consulting</h3>
+      <p>Helping you define long-term goals, improve competitiveness, and navigate mergers and acquisitions.</p>
     </a>
 
-    <a href="operations-consulting.html" class="service-box" style="background-color: white; padding: 20px; width: 300px; border-radius: 10px; transition: transform 0.3s; text-decoration: none; text-align: center;">
-      <h3 style="color: black; font-size: 22px; margin-bottom: 10px;">Operations Consulting</h3>
-      <p style="color: #333;">Streamline processes, reduce costs, and enhance productivity through operational efficiency.</p>
+    <a href="operations-consulting.html" class="service-box">
+      <h3>Operations Consulting</h3>
+      <p>Streamline processes, reduce costs, and enhance productivity through operational efficiency.</p>
     </a>
 
-    <a href="financial-advisory.html" class="service-box" style="background-color: white; padding: 20px; width: 300px; border-radius: 10px; transition: transform 0.3s; text-decoration: none; text-align: center;">
-      <h3 style="color: black; font-size: 22px; margin-bottom: 10px;">Financial Advisory</h3>
-      <p style="color: #333;">We provide expert financial strategies to optimize costs, capital structure, and improve your financial health.</p>
+    <a href="financial-advisory.html" class="service-box">
+      <h3>Financial Advisory</h3>
+      <p>We provide expert financial strategies to optimize costs, capital structure, and improve your financial health.</p>
     </a>
   </div>
 </section>
 
-<!-- CSS for Hover Effects -->
-<style>
-  .service-box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  }
-</style>
+</body>
+</html>
+
 
 
 
