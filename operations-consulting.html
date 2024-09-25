@@ -147,7 +147,10 @@
       </div>
     </section>
   </body>
-</html>
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -163,6 +166,7 @@
       background-color: #f0f0f0; /* Aesthetic light gray */
       color: #333;
       overflow-x: hidden;
+      position: relative;
     }
 
     /* Main container for the about section */
@@ -172,6 +176,7 @@
       align-items: center;
       justify-content: center;
       padding: 50px 0;
+      overflow: hidden; /* For glitter effect */
     }
 
     /* Section container */
@@ -195,7 +200,6 @@
     .content-box {
       position: relative;
       width: 45%;
-      max-width: 500px;
       padding: 30px;
       border-radius: 15px;
       background-color: #ffedda; /* Soft pastel orange */
@@ -203,6 +207,7 @@
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
       transform: translateY(50px) scale(0.9);
       transition: transform 1s ease, opacity 1s ease;
+      text-align: center;
     }
 
     /* Hover effect - hidden magic */
@@ -212,12 +217,10 @@
     }
 
     .content-left {
-      text-align: right;
       background-color: #c1e1dc; /* Soft mint */
     }
 
     .content-right {
-      text-align: left;
       background-color: #ffe4e1; /* Soft blush pink */
     }
 
@@ -242,10 +245,36 @@
       line-height: 1.6;
     }
 
+    /* Glittering effect on background */
+    .glitter {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: url('https://www.transparenttextures.com/patterns/glitter.png'); /* Glitter texture */
+      animation: glitter 10s infinite;
+      opacity: 0.2;
+    }
+
+    @keyframes glitter {
+      0% { background-position: 0 0; }
+      50% { background-position: 100px 100px; }
+      100% { background-position: 0 0; }
+    }
+
     /* Responsive adjustments */
-    @media (max-width: 768px) {
+    @media (max-width: 1200px) {
       .content-box {
         width: 80%;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .content-box {
+        width: 90%;
       }
 
       h2 {
@@ -261,6 +290,8 @@
 <body>
 
 <section id="about">
+  <div class="glitter"></div> <!-- Glitter background -->
+
   <!-- Section: Who We Are -->
   <div class="section" id="who-we-are">
     <div class="content-box content-left">
@@ -308,6 +339,17 @@
       }
     });
   });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+  
+
 </script>
 
 </body>
