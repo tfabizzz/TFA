@@ -151,7 +151,6 @@
 
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -163,7 +162,7 @@
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f0f0f0; /* Aesthetic light gray */
+      background-color: #f0f0f0;
       color: #333;
       overflow-x: hidden;
       position: relative;
@@ -176,61 +175,56 @@
       align-items: center;
       justify-content: center;
       padding: 50px 0;
-      overflow: hidden; /* For glitter effect */
+      position: relative;
+      overflow: hidden;
+      background-color: #faf3e0; /* Aesthetic light beige background */
     }
 
     /* Section container */
     .section {
-      opacity: 0;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      position: relative;
-      margin: 60px 0;
+      flex-direction: column;
       width: 100%;
       max-width: 1200px;
+      text-align: center;
+      margin: 60px 0;
       transition: all 1.2s ease;
     }
 
     .section.active {
       opacity: 1;
+      transform: translateY(0);
     }
 
     /* Cool aesthetic text boxes */
     .content-box {
       position: relative;
-      width: 45%;
+      width: 80%;
+      max-width: 600px;
       padding: 30px;
       border-radius: 15px;
-      background-color: #ffedda; /* Soft pastel orange */
+      background-color: #fff;
       color: #333;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      transform: translateY(50px) scale(0.9);
       transition: transform 1s ease, opacity 1s ease;
-      text-align: center;
+      margin-bottom: 40px;
     }
 
-    /* Hover effect - hidden magic */
+    /* Hover effect with slight scale and glow */
     .content-box:hover {
-      transform: translateY(0) scale(1.05);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(255, 223, 186, 0.6); /* Soft glowing shadow */
     }
 
+    /* Left and right colors for variety */
     .content-left {
-      background-color: #c1e1dc; /* Soft mint */
+      background-color: #ffe4e1; /* Soft pastel pink */
     }
 
     .content-right {
-      background-color: #ffe4e1; /* Soft blush pink */
-    }
-
-    /* Fade-in and horizontal movement */
-    .section.active .content-left {
-      transform: translateX(-30px) translateY(0) scale(1);
-    }
-
-    .section.active .content-right {
-      transform: translateX(30px) translateY(0) scale(1);
+      background-color: #c1e1dc; /* Soft mint green */
     }
 
     /* Text styling */
@@ -243,40 +237,36 @@
     p {
       font-size: 18px;
       line-height: 1.6;
+      color: #555;
     }
 
     /* Glittering effect on background */
     .glitter {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       pointer-events: none;
-      background-image: url('https://www.transparenttextures.com/patterns/glitter.png'); /* Glitter texture */
-      animation: glitter 10s infinite;
-      opacity: 0.2;
+      background: url('https://www.transparenttextures.com/patterns/glitter.png'); /* Glitter texture */
+      opacity: 0.15;
+      animation: glitterMove 10s infinite linear;
     }
 
-    @keyframes glitter {
+    /* Glitter animation */
+    @keyframes glitterMove {
       0% { background-position: 0 0; }
-      50% { background-position: 100px 100px; }
-      100% { background-position: 0 0; }
+      100% { background-position: 500px 500px; }
     }
 
     /* Responsive adjustments */
     @media (max-width: 1200px) {
       .content-box {
-        width: 80%;
-        margin: 0 auto;
+        width: 90%;
       }
     }
 
     @media (max-width: 768px) {
-      .content-box {
-        width: 90%;
-      }
-
       h2 {
         font-size: 26px;
       }
@@ -289,11 +279,14 @@
 </head>
 <body>
 
+<!-- Glitter effect -->
+<div class="glitter"></div>
+
+<!-- About Section -->
 <section id="about">
-  <div class="glitter"></div> <!-- Glitter background -->
 
   <!-- Section: Who We Are -->
-  <div class="section" id="who-we-are">
+  <div class="section">
     <div class="content-box content-left">
       <h2>Who We Are</h2>
       <p>We are a dynamic consulting firm that helps businesses thrive, scale, and overcome challenges with innovative solutions.</p>
@@ -301,7 +294,7 @@
   </div>
 
   <!-- Section: What We Do -->
-  <div class="section" id="what-we-do">
+  <div class="section">
     <div class="content-box content-right">
       <h2>What We Do</h2>
       <p>We offer a wide range of services, including strategic planning, marketing campaigns, and financial advisory, tailored for business success.</p>
@@ -309,7 +302,7 @@
   </div>
 
   <!-- Section: Our Goal -->
-  <div class="section" id="our-goal">
+  <div class="section">
     <div class="content-box content-left">
       <h2>Our Goal</h2>
       <p>Our goal is to empower businesses by providing innovative and effective solutions, helping them reach their highest potential.</p>
@@ -317,14 +310,16 @@
   </div>
 
   <!-- Section: Our Team -->
-  <div class="section" id="our-team">
+  <div class="section">
     <div class="content-box content-right">
       <h2>Our Team</h2>
       <p>Our team consists of industry experts who are passionate about helping your business succeed and grow sustainably.</p>
     </div>
   </div>
+  
 </section>
 
+<!-- JavaScript to trigger animations -->
 <script>
   // Scroll animation for section activation
   const sections = document.querySelectorAll('.section');
@@ -343,6 +338,7 @@
 
 </body>
 </html>
+
 
 
 
