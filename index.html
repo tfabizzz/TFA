@@ -1193,146 +1193,130 @@ body {
 
 
 
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Services - TFA</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
   <style>
-    /* Bold, Eye-catching Our Services Section */
+    /* Luxurious Our Services Section */
     body {
       margin: 0;
       padding: 0;
       font-family: 'Roboto', sans-serif;
-      background-color: #121212; /* Dark background */
-      color: #fff;
+      background-color: #f4f4f9; /* Light background */
     }
 
     #services {
-      background-color: #000;
-      padding: 80px 0;
+      background-color: #fff; /* White background for a clean and bold look */
+      padding: 60px 0;
     }
 
     #services h2 {
       font-family: 'Playfair Display', serif;
-      color: #f4e8c1; /* Luxurious gold */
-      font-size: 48px;
+      color: #333; /* Dark, bold title */
+      font-size: 42px;
       font-weight: bold;
-      margin-bottom: 30px;
-      opacity: 0;
-      transform: translateX(-50px);
-      animation: slideIn 1s forwards; /* Slide-in animation */
+      margin-bottom: 20px;
     }
 
     #services p {
-      color: #dcdcdc;
-      font-size: 20px;
-      margin-bottom: 50px;
-      opacity: 0;
-      transform: translateX(50px);
-      animation: slideIn 1.2s forwards;
+      color: #555;
+      font-size: 18px;
+      margin-bottom: 40px;
     }
 
-    /* Service Box Styling */
+    /* Service Box Styles */
     .service-box {
-      background: rgba(255, 255, 255, 0.08); /* Subtle glass effect */
-      border: 2px solid rgba(255, 255, 255, 0.3); /* Glowing border */
-      padding: 30px;
-      width: 340px;
-      border-radius: 15px;
+      background-color: #fff; /* Clean white background */
+      border: 2px solid #ddd;
+      padding: 25px;
+      width: 320px;
+      border-radius: 12px;
       text-decoration: none;
       text-align: center;
-      transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.3s ease, background-color 0.3s ease;
-      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       position: relative;
-      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1); /* Shadow for depth */
-      opacity: 0;
-      transform: scale(0.8); /* Start smaller */
-      animation: zoomIn 1.5s forwards ease-out;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     }
 
     .service-box h3 {
       font-family: 'Playfair Display', serif;
-      color: #f4e8c1; /* Bold gold text */
-      font-size: 26px;
-      font-weight: 700;
-      margin-bottom: 15px;
+      color: #333; /* Bold dark title */
+      font-size: 24px;
+      margin-bottom: 12px;
     }
 
     .service-box p {
-      color: #fff; /* Increased contrast for clarity */
-      font-size: 17px;
+      color: #555; /* Easily visible dark text */
+      font-size: 16px;
     }
 
-    /* Cool Hover Effects */
+    /* Box Animation */
     .service-box:hover {
-      transform: scale(1.1) rotate(2deg); /* Enlarges and slightly rotates on hover */
-      box-shadow: 0 20px 40px rgba(255, 255, 255, 0.3); /* Bolder shadow on hover */
-      border-color: #f4e8c1; /* Gold border on hover */
-      background-color: rgba(255, 255, 255, 0.15); /* Darker background on hover */
+      transform: translateY(-10px) scale(1.02); /* Lift and scale on hover */
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+      border-color: #333; /* Bold border on hover */
     }
 
-    .service-box::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border-radius: 15px;
-      background: rgba(255, 215, 0, 0.15); /* Subtle gold overlay */
-      opacity: 0;
-      transition: opacity 0.4s ease;
-    }
-
-    .service-box:hover::before {
-      opacity: 1; /* Gold overlay effect on hover */
-    }
-
-    /* Service Box Container */
+    /* Container for Boxes */
     .service-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 35px;
-      max-width: 1300px;
+      gap: 30px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
     }
 
-    /* Mobile Responsive */
+    /* Rotating animation on hover */
+    .service-box:hover::after {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      width: 100%;
+      height: 100%;
+      border: 2px solid #f4e8c1;
+      border-radius: 12px;
+      animation: rotate-border 1s infinite;
+    }
+
+    @keyframes rotate-border {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Other Professional Animations */
+    .service-box {
+      position: relative;
+      transition: transform 0.3s, box-shadow 0.3s ease-in-out;
+    }
+
+    .service-box:hover {
+      transform: translateY(-15px); /* Lift the box */
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-box:hover h3 {
+      color: #f4e8c1; /* Gold heading on hover */
+    }
+
+    /* Service Box Content Visibility on Mobile */
     @media (max-width: 768px) {
       .service-box {
         width: 90%;
       }
 
       #services h2 {
-        font-size: 36px;
-      }
-    }
-
-    /* Animation Keyframes */
-    @keyframes slideIn {
-      0% {
-        opacity: 0;
-        transform: translateX(-50px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    @keyframes zoomIn {
-      0% {
-        opacity: 0;
-        transform: scale(0.8);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1);
+        font-size: 32px;
       }
     }
   </style>
@@ -1367,12 +1351,6 @@ body {
 
 </body>
 </html>
-
-
-
-
-
-
 
 
 
