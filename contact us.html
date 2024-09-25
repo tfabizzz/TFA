@@ -274,6 +274,67 @@ button:hover {
     button, .chat-with-us a {
         font-size: 14px;
         padding: 10px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: #003366; /* Navy blue */
+  color: #fff;
+  padding: 20px;
+}
+
+.hero {
+  background-image: url("hero-image.jpg"); /* Replace with your image */
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.feature {
+  width: 300px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* And so on for the other sections */
+
+
+
+
+
+
+
+
+
+
+
+
+      
     }
 }
 
@@ -281,6 +342,38 @@ button:hover {
 </head>
 
 <body>
+
+
+
+
+
+<div class="container">
+  <header>
+    </header>
+  <main>
+    <section class="hero">
+      </section>
+    <section class="features">
+      </section>
+    <section class="testimonials">
+      </section>
+  </main>
+  <footer>
+    </footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 
   <nav class="navbar   navbar-expand-sm navbar-fixed-top bgcolor1 navbar-dark navht textclr ">
@@ -442,6 +535,34 @@ button:hover {
   </footer>
   </div>
   </div>
+
+
+
+</head>
+<body>
+  <script>
+    //const testimonials = document.querySelectorAll('.testimonial');
+let currentTestimonialIndex = 0;
+
+function showTestimonial() {
+  testimonials.forEach((testimonial) => {
+    testimonial.style.display = 'none';
+  });
+  testimonials[currentTestimonialIndex].style.display = 'block';
+}
+
+showTestimonial();
+
+setInterval(() => {
+  currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+  showTestimonial();
+}, 5000); // Change the interval as needed Your JavaScript code here
+    console.log("Hello from JavaScript!");
+  </script>
+</body>
+</html>
+
+  
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
