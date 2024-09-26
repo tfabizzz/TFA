@@ -1099,34 +1099,39 @@ body {
 <body>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Intro Video - TFA</title>
+<body>
+  <div class="intro-container">
+    <video autoplay muted loop>
+      <source src="your-business-video.mp4" type="video/mp4">
+      <!-- Replace this with the link to your business video -->
+      Your browser does not support the video tag.
+    </video>
+    <div class="logo-overlay">
+      <img src="logo.png" alt="TFA Logo">
+      <h1>Empowering Business Growth</h1>
+      <p>Innovative Solutions for Scaling Your Business</p>
+    </div>
+  </div>
+
   <style>
     body, html {
       margin: 0;
       padding: 0;
+      width: 100%;
       height: 100%;
+      background-color: #000; /* Black background */
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #000; /* Black background */
     }
     .intro-container {
       position: relative;
       width: 100%;
-      max-width: 100vw;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      height: 100vh; /* Full viewport height */
     }
     video {
-      width: 100%;
-      height: 100%;
+      width: 100vw; /* Full viewport width */
+      height: 100%; 
       object-fit: cover;
     }
     .logo-overlay {
@@ -1141,26 +1146,16 @@ body {
       width: 150px;
     }
     .logo-overlay h1 {
-      font-size: 2em;
-      color: black; /* Change text color to black */
+      font-size: 3em;
+      color: white; /* Text color */
+    }
+    .logo-overlay p {
+      font-size: 1.5em;
+      color: white;
     }
   </style>
-</head>
-<body>
-  <div class="intro-container">
-    <video autoplay muted loop>
-      <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
-      <!-- Add a link to your video file here -->
-      Your browser does not support the video tag.
-    </video>
-    <div class="logo-overlay">
-      <img src="logo.png" alt="TFA Logo">
-      <h1>Welcome to TFA</h1>
-      <p>We help businesses grow and scale.</p>
-    </div>
-  </div>
 </body>
-</html>
+
 
 
   
