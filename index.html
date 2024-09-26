@@ -1098,6 +1098,73 @@ body {
 </head>
 <body>
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intro Video - TFA</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000; /* Black background */
+    }
+    .intro-container {
+      position: relative;
+      width: 100%;
+      max-width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .logo-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+    }
+    .logo-overlay img {
+      width: 150px;
+    }
+    .logo-overlay h1 {
+      font-size: 2em;
+      color: black; /* Change text color to black */
+    }
+  </style>
+</head>
+<body>
+  <div class="intro-container">
+    <video autoplay muted loop>
+      <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+      <!-- Add a link to your video file here -->
+      Your browser does not support the video tag.
+    </video>
+    <div class="logo-overlay">
+      <img src="logo.png" alt="TFA Logo">
+      <h1>Welcome to TFA</h1>
+      <p>We help businesses grow and scale.</p>
+    </div>
+  </div>
+</body>
+</html>
+
+
+  
+
 <!-- Luxurious Calendly Section -->
 <div class="booking-section">
   <div class="booking-box">
