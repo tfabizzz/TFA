@@ -640,7 +640,7 @@ body {
     <nav>
         <!-- Logo with animation -->
         <div class="logo">
-            <img src="love (2).png" alt="Logo">
+            <img src="TFA.png" alt="Logo">
             
         </div>
 
@@ -668,139 +668,7 @@ body {
         }
     </script>
 <body>
-  <!-- Video Intro Section -->
-  <div class="video-intro-wrapper">
-    <video autoplay muted playsinline loop class="business-video">
-      <source src="Untitled video - Made with Clipchamp (2).mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="overlay-content">
-      <img src="love(2).png" alt="">
-      <h1></h1>
-      <p></p>
-    </div>
-  </div>
 
-  <!-- Main Content (Your website content goes here) -->
-  <div id="main-content" style="display:none;">
-    <!-- Paste your website's existing content here -->
-    <!-- Example content -->
-    <h2>Welcome to TFA</h2>
-    <p>Your trusted business consultant.</p>
-  </div>
-
-  <style>
-    /* Basic reset for margins and paddings */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Fullscreen Video Styling */
-    .video-intro-wrapper {
-      position: relative;
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-      z-index: 1;
-    }
-
-    .business-video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .overlay-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      color: white;
-    }
-
-    .overlay-content img {
-      width: 150px;
-    }
-
-    .overlay-content h1 {
-      font-size: 3em;
-      margin-top: 20px;
-    }
-
-    .overlay-content p {
-      font-size: 1.5em;
-    }
-
-    /* Make video responsive on mobile */
-    @media only screen and (max-width: 768px) {
-      .overlay-content h1 {
-        font-size: 2em;
-      }
-
-      .overlay-content p {
-        font-size: 1.2em;
-      }
-    }
-
-    /* Fade out effect for video after intro */
-    .fade-out {
-      opacity: 0;
-      transition: opacity 1.5s ease;
-
-      /* Basic styling for the video */
-.business-video {
-  width: 100%; /* Make the video take up the full width of its container */
-  height: auto; /* Maintain the aspect ratio of the video */
-  object-fit: cover; /* Ensures the video covers the container */
-  display: block;
-}
-
-/* Ensure horizontal view for mobile screens */
-@media only screen and (max-width: 768px) {
-  .business-video {
-    width: 100vw; /* Full viewport width for mobile */
-    height: 50vh; /* Limit the height to make it horizontal on mobile */
-  }
-}
-
-/* Optional: Style for larger screens (tablets and above) */
-@media only screen and (min-width: 769px) {
-  .business-video {
-    width: 100vw;
-    height: 100vh; /* Fullscreen video for larger screens */
-  }
-}
-
-    }
-  </style>
-
-  <script>
-    // Function to fade out the video intro after a set time
-    window.onload = function() {
-      const videoWrapper = document.querySelector('.video-intro-wrapper');
-      const mainContent = document.getElementById('main-content');
-
-      // Set a timeout to remove the video after 5 seconds (5000ms)
-      setTimeout(function() {
-        videoWrapper.classList.add('fade-out');
-        // Display the main content after the fade-out completes
-        setTimeout(function() {
-          videoWrapper.style.display = 'none';
-          mainContent.style.display = 'block';
-        }, 1500); // Wait for the fade-out animation to complete
-      }, 8000); // 5 seconds video display
-    };
-
-    <video autoplay muted playsinline loop class="business-video">
-  <source src="videos/business-intro.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-  </script>
-</body>
 
 </body>
 
@@ -1003,34 +871,7 @@ body {
 
 
 
- <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-
-<!-- Indicators/dots -->
-<div class="carousel-indicators">
-<button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-<button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-<button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-</div>
-
-<!-- The slideshow/carousel -->
-<div class="carousel-inner">
-<div class="carousel-item active">
-  <img src="pexels-scottwebb-27406.jpg" alt="TheFineAce.com" class="d-block" height="500px"
-    width="100%">
-  <div class="carousel-caption">
-    <center><h1 style="font-size: 50px;">TheFineAce</h1></center>
-    <h3 style="font-size: 20px; margin-bottom: 200px;">where businesses meet</h3>
-
-  </div>
-</div>
-<div class="carousel-item">
-  <img src="Home.png" alt="tfa" class="d-block" height="500px" width="100%">
-  <div class="carousel-caption">
-    <h3 style="font-size: 80px; margin-bottom: 200px;"> </h3>
-  </div>
-</div>
-<div class="carousel-item">
+ 
 
 
 
