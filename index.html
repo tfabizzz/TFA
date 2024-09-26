@@ -1,67 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TFA Business Intro</title>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #000; /* Black background */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .intro-container {
-      position: relative;
-      width: 100%;
-      height: 100vh; /* Full viewport height */
-    }
-    video {
-      width: 100vw; /* Full viewport width */
-      height: 100%; 
-      object-fit: cover;
-    }
-    .logo-overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      color: #fff;
-    }
-    .logo-overlay img {
-      width: 150px;
-    }
-    .logo-overlay h1 {
-      font-size: 3em;
-      color: black; /* Text color */
-    }
-    .logo-overlay p {
-      font-size: 1.5em;
-      color: black;
-    }
-  </style>
-</head>
 
-<body>
-  <div class="intro-container">
-    <video autoplay muted loop>
-      <source src="your-business-video.mp4" type="video/mp4">
-      <!-- Replace this with the link to your business video -->
-      Your browser does not support the video tag.
-    </video>
-    <div class="logo-overlay">
-      <img src="logo.png" alt="TFA Logo">
-      <h1>Empowering Business Growth</h1>
-      <p>Innovative Solutions for Scaling Your Business</p>
-    </div>
-  </div>
-</body>
-</html>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -751,6 +688,109 @@ body {
             menu.classList.toggle('show');
         }
     </script>
+<body>
+  <!-- Video Intro Section -->
+  <div class="video-intro-wrapper">
+    <video autoplay muted playsinline loop class="business-video">
+      <source src="your-business-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay-content">
+      <img src="logo.png" alt="TFA Logo">
+      <h1>Empowering Business Growth</h1>
+      <p>Innovative Solutions for Scaling Your Business</p>
+    </div>
+  </div>
+
+  <!-- Main Content (Your website content goes here) -->
+  <div id="main-content" style="display:none;">
+    <!-- Paste your website's existing content here -->
+    <!-- Example content -->
+    <h2>Welcome to TFA</h2>
+    <p>Your trusted business consultant.</p>
+  </div>
+
+  <style>
+    /* Basic reset for margins and paddings */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fullscreen Video Styling */
+    .video-intro-wrapper {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .business-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .overlay-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+    }
+
+    .overlay-content img {
+      width: 150px;
+    }
+
+    .overlay-content h1 {
+      font-size: 3em;
+      margin-top: 20px;
+    }
+
+    .overlay-content p {
+      font-size: 1.5em;
+    }
+
+    /* Make video responsive on mobile */
+    @media only screen and (max-width: 768px) {
+      .overlay-content h1 {
+        font-size: 2em;
+      }
+
+      .overlay-content p {
+        font-size: 1.2em;
+      }
+    }
+
+    /* Fade out effect for video after intro */
+    .fade-out {
+      opacity: 0;
+      transition: opacity 1.5s ease;
+    }
+  </style>
+
+  <script>
+    // Function to fade out the video intro after a set time
+    window.onload = function() {
+      const videoWrapper = document.querySelector('.video-intro-wrapper');
+      const mainContent = document.getElementById('main-content');
+
+      // Set a timeout to remove the video after 5 seconds (5000ms)
+      setTimeout(function() {
+        videoWrapper.classList.add('fade-out');
+        // Display the main content after the fade-out completes
+        setTimeout(function() {
+          videoWrapper.style.display = 'none';
+          mainContent.style.display = 'block';
+        }, 1500); // Wait for the fade-out animation to complete
+      }, 5000); // 5 seconds video display
+    };
+  </script>
+</body>
 
 </body>
 
