@@ -770,6 +770,31 @@ body {
     .fade-out {
       opacity: 0;
       transition: opacity 1.5s ease;
+
+      /* Basic styling for the video */
+.business-video {
+  width: 100%; /* Make the video take up the full width of its container */
+  height: auto; /* Maintain the aspect ratio of the video */
+  object-fit: cover; /* Ensures the video covers the container */
+  display: block;
+}
+
+/* Ensure horizontal view for mobile screens */
+@media only screen and (max-width: 768px) {
+  .business-video {
+    width: 100vw; /* Full viewport width for mobile */
+    height: 50vh; /* Limit the height to make it horizontal on mobile */
+  }
+}
+
+/* Optional: Style for larger screens (tablets and above) */
+@media only screen and (min-width: 769px) {
+  .business-video {
+    width: 100vw;
+    height: 100vh; /* Fullscreen video for larger screens */
+  }
+}
+
     }
   </style>
 
@@ -786,9 +811,15 @@ body {
         setTimeout(function() {
           videoWrapper.style.display = 'none';
           mainContent.style.display = 'block';
-        }, 15000); // Wait for the fade-out animation to complete
+        }, 1500); // Wait for the fade-out animation to complete
       }, 10000); // 5 seconds video display
     };
+
+    <video autoplay muted playsinline loop class="business-video">
+  <source src="videos/business-intro.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
   </script>
 </body>
 
