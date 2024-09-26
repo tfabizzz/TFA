@@ -67,7 +67,7 @@
       padding: 30px;
       border-radius: 15px;
       background-color: #fff;
-      color: #333;
+      color: #333; /* Black text */
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
       transition: transform 1s ease, opacity 1s ease;
       margin-bottom: 40px;
@@ -92,13 +92,29 @@
     h2 {
       font-size: 32px;
       margin-bottom: 10px;
-      color: #fff;
+      color: #fff; /* Keep headings white for contrast */
     }
 
     p {
       font-size: 18px;
       line-height: 1.6;
+      color: #333; /* Black text for content */
+    }
+
+    /* Logo section */
+    .logo-container {
+      margin-bottom: 30px;
+    }
+
+    .logo-container img {
+      width: 150px;
+      height: auto;
+    }
+
+    .company-description {
       color: #fff;
+      margin-bottom: 50px;
+      font-size: 22px;
     }
 
     /* Glittering effect on background */
@@ -162,8 +178,14 @@
   <!-- Glitter effect -->
   <div class="glitter"></div>
 
-  <!-- About Section -->
+  <!-- Logo Section -->
   <section id="about">
+    <div class="logo-container">
+      <img src="logo.png" alt="TFA Logo">
+    </div>
+    <div class="company-description">
+      <p>TFA helps businesses grow and scale by identifying challenges and providing tailored solutions. We empower businesses to achieve success through innovative strategies and hands-on execution.</p>
+    </div>
 
     <!-- Section: Who We Are -->
     <div class="section">
@@ -219,5 +241,6 @@
 </body>
 
 </html>
+
 
 
