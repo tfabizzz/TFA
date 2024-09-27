@@ -9,18 +9,43 @@
 
 <url>
   <loc>https://thefineace.com/</loc>
-  <lastmod>2024-07-12T08:45:40+00:00</lastmod>
+  <lastmod>2024-09-27T05:55:56+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://thefineace.com/index.html</loc>
-  <lastmod>2024-07-12T08:45:40+00:00</lastmod>
+  <loc>https://thefineace.com/our-services.html</loc>
+  <lastmod>2024-09-27T05:55:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://thefineace.com/about-us.html</loc>
+  <lastmod>2024-09-27T05:55:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thefineace.com/contact%20us.html</loc>
-  <lastmod>2024-07-12T08:45:40+00:00</lastmod>
+  <lastmod>2024-09-27T05:55:56+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://thefineace.com/strategy-consulting.html</loc>
+  <lastmod>2024-09-27T05:55:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://thefineace.com/operations-consulting.html</loc>
+  <lastmod>2024-09-27T05:55:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://thefineace.com/financial-advisory.html</loc>
+  <lastmod>2024-09-27T05:55:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://thefineace.com/index.html</loc>
+  <lastmod>2024-09-27T05:55:56+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
