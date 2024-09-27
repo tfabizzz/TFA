@@ -1634,11 +1634,6 @@ body {
 
 
 
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1649,23 +1644,26 @@ body {
     body {
       margin: 0;
       padding: 0;
-      background-color: #f0f0f0;
+      background-color: #f0f0f0; /* Change to your website's background color */
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      height: 100vh; /* Adjust height as needed */
+      flex-direction: column; /* Stack items vertically */
     }
 
     .word-container {
       display: flex;
-      font-size: 30px;
+      font-size: 30px; /* Adjust size as needed */
       font-weight: bold;
-      color: #333;
+      color: #333; /* Change to match your site's color scheme */
+      margin-bottom: 20px; /* Space before footer or next section */
     }
 
     .word span {
       opacity: 0;
-      animation: revealLetter 0.1s forwards;
+      animation: revealLetter 0.5s forwards;
+      white-space: pre; /* Ensure spacing is preserved */
     }
 
     @keyframes revealLetter {
@@ -1704,10 +1702,14 @@ body {
     }
 
     cycleWords(); // Display first word immediately
-    setInterval(cycleWords, 1000); // Change word every 3 seconds
+    setInterval(cycleWords, 3000); // Change word every 3 seconds
   </script>
 </body>
 </html>
+
+
+</body>
+
 
 
 
