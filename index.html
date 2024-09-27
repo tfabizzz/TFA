@@ -1,9 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Website Title</title>
+  <style>
+    /* Existing styles */
+    .breadcrumb {
+      list-style: none;
+      padding: 10px 0;
+      background: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .breadcrumb li {
+      margin-right: 10px;
+    }
+
+    .breadcrumb li a {
+      text-decoration: none;
+      color: #007bff; /* Change to match your theme */
+    }
+
+    .breadcrumb li a:hover {
+      text-decoration: underline;
+    }
+
+    .breadcrumb li[aria-current="page"] {
+      color: #6c757d; /* Change to match your theme */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Website</h1>
+  </header>
+
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/services">Services</a></li>
+      <li aria-current="page">Current Page</li>
+    </ol>
+  </nav>
+
+  <main>
+    <!-- Your existing content -->
+  </main>
+</body>
+</html>
 
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Your Website Name",
+  "url": "https://www.thefineace.com",
+  "logo": "https://www.thefineace.com/logo.png",
+  "description": "Your website description goes here.",
+  "sameAs": [
+    "https://www.facebook.com/yourprofile",
+    "https://www.twitter.com/yourprofile",
+    "https://www.linkedin.com/in/yourprofile"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-555-555-5555",
+    "contactType": "Customer Service"
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+  
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RHSS767M4B"></script>
 <script>
@@ -1631,94 +1717,6 @@ body {
             <span>Chat with Us</span>
         </a>
     </div>
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Letter-by-Letter Animation</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0; /* Change to your website's background color */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh; /* Adjust height as needed */
-      flex-direction: column; /* Stack items vertically */
-    }
-
-    .word-container {
-      display: flex;
-      font-size: 30px; /* Adjust size as needed */
-      font-weight: bold;
-      color: #333; /* Change to match your site's color scheme */
-      margin-bottom: 20px; /* Space before footer or next section */
-    }
-
-    .word span {
-      opacity: 0;
-      animation: revealLetter 0.5s forwards;
-      white-space: pre; /* Ensure spacing is preserved */
-    }
-
-    @keyframes revealLetter {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="word-container"></div>
-
-  <script>
-    const words = ['Analyze', 'Research', 'Evaluate', 'Plan', 'Execute'];
-    const wordContainer = document.querySelector('.word-container');
-    let wordIndex = 0;
-
-    function displayWord(word) {
-      wordContainer.innerHTML = ''; // Clear previous word
-      word.split('').forEach((letter, index) => {
-        const span = document.createElement('span');
-        span.textContent = letter;
-        span.style.animationDelay = `${index * 0.2}s`; // Delay each letter
-        wordContainer.appendChild(span);
-      });
-    }
-
-    function cycleWords() {
-      displayWord(words[wordIndex]);
-      wordIndex = (wordIndex + 1) % words.length;
-    }
-
-    cycleWords(); // Display first word immediately
-    setInterval(cycleWords, 3000); // Change word every 3 seconds
-  </script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
