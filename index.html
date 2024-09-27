@@ -1633,6 +1633,94 @@ body {
     </div>
 
 
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letter-by-Letter Animation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .word-container {
+      display: flex;
+      font-size: 30px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .word span {
+      opacity: 0;
+      animation: revealLetter 0.1s forwards;
+    }
+
+    @keyframes revealLetter {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="word-container"></div>
+
+  <script>
+    const words = ['Analyze', 'Research', 'Evaluate', 'Plan', 'Execute'];
+    const wordContainer = document.querySelector('.word-container');
+    let wordIndex = 0;
+
+    function displayWord(word) {
+      wordContainer.innerHTML = ''; // Clear previous word
+      word.split('').forEach((letter, index) => {
+        const span = document.createElement('span');
+        span.textContent = letter;
+        span.style.animationDelay = `${index * 0.2}s`; // Delay each letter
+        wordContainer.appendChild(span);
+      });
+    }
+
+    function cycleWords() {
+      displayWord(words[wordIndex]);
+      wordIndex = (wordIndex + 1) % words.length;
+    }
+
+    cycleWords(); // Display first word immediately
+    setInterval(cycleWords, 1000); // Change word every 3 seconds
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
 <!-- Footer ----------------------------- ------------------------------------------------------------------------>
 <!DOCTYPE html>
 <html lang="en">
