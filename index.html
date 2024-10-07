@@ -1822,7 +1822,7 @@ body {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Subscription Plans | TFA</title>
+    <title>Subscription Carousel | TFA</title>
     <style>
         * {
             margin: 0;
@@ -1831,8 +1831,7 @@ body {
         }
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f7f7f7;
-            color: #333;
+            background-color: #f4f4f4;
         }
         .subscription-section {
             text-align: center;
@@ -1841,65 +1840,70 @@ body {
             color: white;
         }
         .subscription-section h1 {
-            font-size: 3em;
+            font-size: 2.5em;
+            margin-bottom: 20px;
             color: #f4c542;
         }
-        .plan-container {
+        .carousel {
             display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 40px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
         }
         .plan {
             background-color: white;
+            color: #333;
             padding: 30px;
-            width: 30%;
+            margin: 0 10px;
+            min-width: 300px;
             border-radius: 10px;
-            margin: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            scroll-snap-align: center;
+            flex: 0 0 auto;
+            text-align: left;
         }
         .plan h2 {
-            font-size: 2em;
-            margin-bottom: 10px;
             color: #183d5d;
+            font-size: 1.8em;
+            margin-bottom: 10px;
         }
         .price {
-            font-size: 2.5em;
+            font-size: 2em;
             color: #f4c542;
+        }
+        .discounted-price {
+            font-size: 1.5em;
+            text-decoration: line-through;
+            color: #999;
         }
         .plan ul {
             list-style: none;
             padding: 0;
             margin: 20px 0;
-            text-align: left;
         }
         .plan ul li {
             margin: 10px 0;
-            font-size: 1.2em;
         }
         .plan button {
             background-color: #183d5d;
             color: white;
             border: none;
-            padding: 15px 30px;
+            padding: 10px 20px;
             font-size: 1.2em;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 10px;
         }
         .plan button:hover {
             background-color: #0a223d;
         }
 
-        /* Responsive Styling */
-        @media screen and (max-width: 992px) {
-            .plan {
-                width: 45%;
+        /* Responsive Design */
+        @media screen and (min-width: 768px) {
+            .carousel {
+                justify-content: center;
             }
-        }
-        @media screen and (max-width: 768px) {
             .plan {
-                width: 100%;
+                min-width: 350px;
             }
         }
     </style>
@@ -1907,47 +1911,67 @@ body {
 <body>
     <section class="subscription-section">
         <h1>Choose Your Plan</h1>
-        <div class="plan-container">
-            <!-- Basic Plan -->
+        <div class="carousel">
+            <!-- Business Plan -->
             <div class="plan">
-                <h2>Basic</h2>
-                <p class="price">₹40,000/year</p>
+                <h2>Business</h2>
+                <p class="discounted-price">₹699.00/mo</p>
+                <p class="price">₹249.00/mo</p>
                 <ul>
-                    <li>Weekly Business Insights</li>
-                    <li>Email Support (4 per month)</li>
-                    <li>Access to Exclusive Content</li>
+                    <li>100 websites</li>
+                    <li>200 GB NVMe storage</li>
+                    <li>Free domain & email</li>
+                    <li>Free CDN, SSL & backups</li>
+                    <li>Priority support</li>
                 </ul>
-                <button>Subscribe Now</button>
+                <button>Choose Plan</button>
             </div>
 
             <!-- Premium Plan -->
             <div class="plan">
                 <h2>Premium</h2>
-                <p class="price">₹1,00,000/year</p>
+                <p class="discounted-price">₹999.00/mo</p>
+                <p class="price">₹399.00/mo</p>
                 <ul>
-                    <li>Monthly Business Audits</li>
-                    <li>Personalized Video Calls</li>
-                    <li>Advanced Strategy Reports</li>
+                    <li>Managed Hosting</li>
+                    <li>500 GB storage</li>
+                    <li>24/7 Support</li>
+                    <li>Advanced WooCommerce</li>
                 </ul>
-                <button>Subscribe Now</button>
+                <button>Choose Plan</button>
+            </div>
+
+            <!-- Advanced Plan -->
+            <div class="plan">
+                <h2>Advanced</h2>
+                <p class="discounted-price">₹1,499.00/mo</p>
+                <p class="price">₹699.00/mo</p>
+                <ul>
+                    <li>500 websites</li>
+                    <li>1 TB NVMe storage</li>
+                    <li>Dedicated IP</li>
+                    <li>Unlimited CDN & SSL</li>
+                </ul>
+                <button>Choose Plan</button>
             </div>
 
             <!-- VIP Plan -->
             <div class="plan">
                 <h2>VIP</h2>
-                <p class="price">₹5,00,000/year</p>
+                <p class="discounted-price">₹2,999.00/mo</p>
+                <p class="price">₹1,299.00/mo</p>
                 <ul>
-                    <li>24/7 Support & Priority Service</li>
-                    <li>Comprehensive Business Solutions</li>
-                    <li>Access to Senior Consultants</li>
+                    <li>Unlimited websites</li>
+                    <li>Unlimited storage</li>
+                    <li>Daily backups & security</li>
+                    <li>Enterprise-level support</li>
                 </ul>
-                <button>Subscribe Now</button>
+                <button>Choose Plan</button>
             </div>
         </div>
     </section>
 </body>
 </html>
-
 
 
 
