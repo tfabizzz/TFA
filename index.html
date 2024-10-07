@@ -1822,11 +1822,16 @@ body {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subscription Plans | The Fine Ace</title>
+    <title>Responsive Subscription Plans | TFA</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
-            font-family: 'Georgia', serif;
-            background-color: #f0f4f8;
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
             color: #333;
         }
         .subscription-section {
@@ -1838,37 +1843,38 @@ body {
         .subscription-section h1 {
             font-size: 3em;
             color: #f4c542;
-            font-family: 'Times New Roman', serif;
         }
         .plan-container {
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap;
             margin-top: 40px;
         }
         .plan {
-            background-color: #f4c542;
+            background-color: white;
             padding: 30px;
             width: 30%;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         .plan h2 {
-            color: #0a223d;
             font-size: 2em;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            color: #183d5d;
         }
         .price {
             font-size: 2.5em;
-            color: #183d5d;
+            color: #f4c542;
         }
         .plan ul {
             list-style: none;
             padding: 0;
-            color: #0a223d;
+            margin: 20px 0;
             text-align: left;
         }
         .plan ul li {
-            margin: 15px 0;
+            margin: 10px 0;
             font-size: 1.2em;
         }
         .plan button {
@@ -1879,23 +1885,36 @@ body {
             font-size: 1.2em;
             border-radius: 5px;
             cursor: pointer;
+            margin-top: 10px;
         }
         .plan button:hover {
             background-color: #0a223d;
+        }
+
+        /* Responsive Styling */
+        @media screen and (max-width: 992px) {
+            .plan {
+                width: 45%;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .plan {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <section class="subscription-section">
-        <h1>Choose Your  Subscription Plan</h1>
+        <h1>Choose Your Plan</h1>
         <div class="plan-container">
             <!-- Basic Plan -->
             <div class="plan">
                 <h2>Basic</h2>
-                <p class="price">₹40,000</p>
+                <p class="price">₹40,000/year</p>
                 <ul>
                     <li>Weekly Business Insights</li>
-                    <li>Email Consultation (4 per month)</li>
+                    <li>Email Support (4 per month)</li>
                     <li>Access to Exclusive Content</li>
                 </ul>
                 <button>Subscribe Now</button>
@@ -1904,9 +1923,9 @@ body {
             <!-- Premium Plan -->
             <div class="plan">
                 <h2>Premium</h2>
-                <p class="price">₹1,00,000</p>
+                <p class="price">₹1,00,000/year</p>
                 <ul>
-                    <li>Monthly Business Audit</li>
+                    <li>Monthly Business Audits</li>
                     <li>Personalized Video Calls</li>
                     <li>Advanced Strategy Reports</li>
                 </ul>
@@ -1916,10 +1935,10 @@ body {
             <!-- VIP Plan -->
             <div class="plan">
                 <h2>VIP</h2>
-                <p class="price">₹5,00,000</p>
+                <p class="price">₹5,00,000/year</p>
                 <ul>
                     <li>24/7 Support & Priority Service</li>
-                    <li>Comprehensive Solutions in all Areas</li>
+                    <li>Comprehensive Business Solutions</li>
                     <li>Access to Senior Consultants</li>
                 </ul>
                 <button>Subscribe Now</button>
@@ -1928,6 +1947,7 @@ body {
     </section>
 </body>
 </html>
+
 
 
 
