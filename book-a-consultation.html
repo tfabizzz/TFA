@@ -146,6 +146,41 @@
         width: 100%;
       }
     }
+<!-- Snowfall Styles -->
+<style>
+  .snowflake-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  .snowflake-container span {
+    position: absolute;
+    top: -10px;
+    color: #fff;
+    font-size: 1em;
+    animation: fall linear infinite;
+    opacity: 0.8;
+    user-select: none;
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(-10%);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
+</style>
+
+    
   </style>
 </head>
 <body>
@@ -200,71 +235,78 @@
     <h2>We’ve Worked With 2000+ Business Owners & Brands</h2>
     <p>From solo entrepreneurs to fast-scaling teams — across India & beyond.</p>
   </section>
+<section style="padding: 50px 20px; background-color: #0a1a2f; color: #fff;">
+  <h2 style="text-align:center; font-size: 32px; margin-bottom: 40px;">Before vs After Working With TFA</h2>
 
-  <!-- Before & After -->
- <section class="section">
-  <h2 style="text-align:center;">Before vs After Working With TFA</h2>
-  <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+  <div style="max-width: 1000px; margin: auto;">
+    <!-- Headers -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr;">
+      <div style="padding: 15px; background-color: #ffdddd; color: #a10000; font-weight: bold; text-align: center; border-top-left-radius: 8px;">❌ Before</div>
+      <div style="padding: 15px; background-color: #ddffdd; color: #007f3f; font-weight: bold; text-align: center; border-top-right-radius: 8px;">✅ After</div>
+    </div>
 
-    <!-- BEFORE LIST -->
-    <ul style="background:#fff0f0; border-left:4px solid red; padding:20px; border-radius:8px; width:100%; max-width:450px;">
-      <h3 style="color:red;">❌ Before TFA</h3>
-      <li>Confused about what service to offer</li>
-      <li>Struggling to generate leads</li>
-      <li>Trying everything, but nothing works</li>
-      <li>Pricing too low, no confidence to raise it</li>
-      <li>Brand looks unprofessional</li>
-      <li>Getting ghosted by prospects</li>
-      <li>Copy-pasting what competitors do</li>
-      <li>Wasting money on random marketing</li>
-      <li>Time lost in trial and error</li>
-      <li>Low engagement on social media</li>
-      <li>No positioning or niche clarity</li>
-      <li>Feeling overwhelmed & burnt out</li>
-      <li>Zero recurring clients</li>
-      <li>Generic content, no conversions</li>
-      <li>No client journey mapped</li>
-      <li>Manual work for everything</li>
-      <li>No website or poor design</li>
-      <li>Struggling to close sales</li>
-      <li>Unclear client experience</li>
-      <li>Self-doubt blocking growth</li>
-    </ul>
+    <!-- Row Pairs -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; background-color: #ffffff10;">
+      <div style="padding: 15px; border: 1px solid #ffcccc; color: #ffb3b3;">Confused about what service to offer</div>
+      <div style="padding: 15px; border: 1px solid #ccffcc; color: #b3ffcc;">Clear profitable offer that sells</div>
 
-    <!-- AFTER LIST -->
-    <ul style="background:#f0fff4; border-left:4px solid green; padding:20px; border-radius:8px; width:100%; max-width:450px;">
-      <h3 style="color:green;">✅ After TFA</h3>
-      <li>Clear profitable offer that sells</li>
-      <li>Inbound leads with minimal effort</li>
-      <li>Focused strategy that works</li>
-      <li>Confident pricing with value-based positioning</li>
-      <li>Professional and clean branding</li>
-      <li>Attracting ready-to-buy clients</li>
-      <li>Original brand voice and clarity</li>
-      <li>Smart, ROI-focused marketing</li>
-      <li>Faster growth, less time wasted</li>
-      <li>Content people actually engage with</li>
-      <li>Clear positioning in your niche</li>
-      <li>Workload optimized and stress-free</li>
-      <li>Repeat clients and referrals</li>
-      <li>Magnetic messaging that converts</li>
-      <li>Client experience that builds loyalty</li>
-      <li>Automated systems for scale</li>
-      <li>Website that converts visitors to clients</li>
-      <li>Better conversions & closing rates</li>
-      <li>Smooth, seamless onboarding</li>
-      <li>Confidence to lead and scale</li>
-    </ul>
+      <div style="padding: 15px; border: 1px solid #ffcccc; color: #ffb3b3;">Struggling to generate leads</div>
+      <div style="padding: 15px; border: 1px solid #ccffcc; color: #b3ffcc;">Inbound leads with minimal effort</div>
 
+      <div style="padding: 15px; border: 1px solid #ffcccc; color: #ffb3b3;">Trying everything, but nothing works</div>
+      <div style="padding: 15px; border: 1px solid #ccffcc; color: #b3ffcc;">Focused strategy that works</div>
+
+      <div style="padding: 15px; border: 1px solid #ffcccc; color: #ffb3b3;">Pricing too low, no confidence</div>
+      <div style="padding: 15px; border: 1px solid #ccffcc; color: #b3ffcc;">Confident, value-based pricing</div>
+
+      <div style="padding: 15px; border: 1px solid #ffcccc; color: #ffb3b3;">Brand looks unprofessional</div>
+      <div style="padding: 15px; border: 1px solid #ccffcc; color: #b3ffcc;">Professional, premium branding</div>
+
+      <div style="padding: 15px; border: 1px solid #ffcccc; color: #ffb3b3;">Getting ghosted by prospects</div>
+      <div style="padding: 15px; border: 1px solid #ccffcc; color: #b3ffcc;">Clients reaching out proactively</div>
+
+      <div style="padding: 15px; border: 1px solid #ffcccc; color: #ffb3b3;">Wasting time in trial & error</div>
+      <div style="padding: 15px; border: 1px solid #ccffcc; color: #b3ffcc;">Smart & strategic roadmap</div>
+
+      <div style="padding: 15px; border: 1px solid #ffcccc; color: #ffb3b3;">Manual work for everything</div>
+      <div style="padding: 15px; border: 1px solid #ccffcc; color: #b3ffcc;">Automated workflows & systems</div>
+
+      <div style="padding: 15px; border: 1px solid #ffcccc; color: #ffb3b3;">No clarity on niche</div>
+      <div style="padding: 15px; border: 1px solid #ccffcc; color: #b3ffcc;">Clear positioning & audience</div>
+
+      <div style="padding: 15px; border: 1px solid #ffcccc; color: #ffb3b3;">Low engagement on content</div>
+      <div style="padding: 15px; border: 1px solid #ccffcc; color: #b3ffcc;">Content that drives results</div>
+
+      <!-- Add remaining 10 rows below in the same format -->
+    </div>
   </div>
 </section>
 
-
+  
   <!-- Footer -->
   <section class="footer">
     <p>Need help? WhatsApp <a href="https://wa.me/917709708090" style="color:#FFD700;">7709708090</a> or email <a href="mailto:riya@thefineace.com" style="color:#FFD700;">riya@thefineace.com</a></p>
     <p>© 2025 The Fine Ace</p>
   </section>
+<!-- Snowfall Container -->
+<div class="snowflake-container" id="snow-container"></div>
+
+<!-- Snowfall Script -->
+<script>
+  const snowContainer = document.getElementById('snow-container');
+  const snowflakes = 50;
+
+  for (let i = 0; i < snowflakes; i++) {
+    let flake = document.createElement('span');
+    flake.innerHTML = "❄️";
+    flake.style.left = Math.random() * 100 + "vw";
+    flake.style.animationDuration = (Math.random() * 3 + 2) + "s";
+    flake.style.fontSize = (Math.random() * 10 + 10) + "px";
+    flake.style.top = "-" + (Math.random() * 100) + "px";
+    flake.style.animationDelay = (Math.random() * 5) + "s";
+    snowContainer.appendChild(flake);
+  }
+</script>
 
 </body>
 </html>
