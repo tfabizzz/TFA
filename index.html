@@ -7,6 +7,85 @@
 
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TheFineAce</title>
+
+  <!-- OneSignal Web Push Code -->
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    window.OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+      OneSignal.init({
+        appId: "25f5f9b8-c432-4c6b-a3d2-3e7cf73daf46",
+        notifyButton: {
+          enable: true,
+          theme: 'default',
+          size: 'medium',
+          position: 'bottom-right'
+        },
+        promptOptions: {
+          actionMessage: "wanna know something cool every now and then?",
+          acceptButtonText: "Yes!",
+          cancelButtonText: "No Thanks"
+        }
+      });
+    });
+  </script>
+  <!-- End OneSignal Code -->
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+      background: linear-gradient(to bottom right, #001f3f, #ffd700);
+      color: white;
+      text-align: center;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5em;
+    }
+    p {
+      font-size: 1.25rem;
+    }
+    .notify-hint {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #fff8dc;
+    }
+  </style>
+</head>
+<body>
+  <h1>TheFineAce Glad you said yes </h1>
+
+  <p>  Only the kind of stuff that makes you go ‘ooh interesting</p>
+  <div class="notify-hint">👉 Click the bell icon in the corner to allow notifications!</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
 <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
 <script>
   window.OneSignalDeferred = window.OneSignalDeferred || [];
